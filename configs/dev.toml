@@ -1,0 +1,11 @@
+[runtime]
+mode = "simulation"
+language = "de-DE"
+hardware_enabled = false
+cloud_fallback = false
+raw_media_retention = false
+
+[services]
+model_url = "http://127.0.0.1:1234/v1"
+asr_url = "http://127.0.0.1:5001"
+tts_url = "http://127.0.0.1:5002"

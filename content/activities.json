@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "language": "de-DE",
+  "activities": [
+    {
+      "id": "story_turns",
+      "title_de": "Wir erfinden eine Geschichte",
+      "prompts_de": [
+        "Ein kleiner Bär findet einen bunten Stein. Was könnte jetzt passieren?",
+        "Welche Figur möchtest du dazuerfinden?",
+        "Möchtest du weitererzählen, zuhören oder eine Pause machen?"
+      ],
+      "concept_ids": ["oral_language", "story_sequence", "turn_taking"],
+      "parent_reviewed": false,
+      "source": "original-project-template"
+    },
+    {
+      "id": "color_sort",
+      "title_de": "Farben zusammenlegen",
+      "prompts_de": [
+        "Welche Bauklötze möchtest du zusammenlegen?",
+        "Findest du noch einen Klotz mit derselben Farbe?",
+        "Erzähl mir, wie du deine Gruppen gemacht hast."
+      ],
+      "concept_ids": ["color_vocabulary", "classification", "explanation"],
+      "parent_reviewed": false,
+      "source": "original-project-template"
+    },
+    {
+      "id": "count_objects",
+      "title_de": "Wir zählen Bauklötze",
+      "prompts_de": [
+        "Möchtest du ein paar Bauklötze in eine Reihe legen?",
+        "Zählen wir zusammen und zeigen dabei auf jeden Klotz. Wie viele sind es?",
+        "Was passiert mit der Anzahl, wenn wir einen Klotz dazulegen?"
+      ],
+      "concept_ids": ["one_to_one_counting", "quantity", "change_in_quantity"],
+      "parent_reviewed": false,
+      "source": "original-project-template"
+    },
+    {
+      "id": "drawing_chat",
+      "title_de": "Erzähl mir von deinem Bild",
+      "prompts_de": [
+        "Was möchtest du mir über dein Bild erzählen?",
+        "Was passiert dort in deiner Geschichte?",
+        "Möchtest du noch etwas malen oder dein Bild jemandem zeigen?"
+      ],
+      "concept_ids": ["description", "drawing_expression", "imagination"],
+      "parent_reviewed": false,
+      "source": "original-project-template"
+    }
+  ]
+}
