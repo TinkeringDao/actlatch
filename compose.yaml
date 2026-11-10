@@ -1,0 +1,16 @@
+# Simulation/health example only. A real LAN adapter needs a separate reviewed profile.
+services:
+  companion:
+    build: .
+    network_mode: none
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: [/tmp]
+    mem_limit: 256m
+    cpus: 1.0
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8099/healthz',timeout=2)"]
+      interval: 30s
+      timeout: 3s
+      retries: 2
