@@ -1,0 +1,2742 @@
+[
+  {
+    "id": "SRC-52700cddca5e",
+    "url": "https://huggingface.co/Qwen/Qwen3.5-4B",
+    "title": "Qwen3.5-4B official model card",
+    "aliases": [
+      "ARCH-02"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-02",
+        "title": "Qwen3.5-4B official model card",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-4B",
+        "type": "primary_model_card",
+        "accessed_at": "2026-11-02T23:08:01.642054+01:00",
+        "claims": [
+          "Official small multimodal model candidate; Apache-2.0 model metadata."
+        ],
+        "limitations": "No local latency, German preschool dialogue, tool reliability or child-safety benchmark performed.",
+        "review_status": "reviewed_primary"
+      }
+    ]
+  },
+  {
+    "id": "SRC-8f4d2163b5e6",
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "title": "llama.cpp repository",
+    "aliases": [
+      "ARCH-03"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-03",
+        "title": "llama.cpp repository",
+        "url": "https://github.com/ggml-org/llama.cpp",
+        "type": "primary_repository",
+        "accessed_at": "2026-11-02T23:08:01.642054+01:00",
+        "claims": [
+          "Local GGUF inference/runtime candidate."
+        ],
+        "limitations": "Current Pascal/GPU build and chosen model compatibility require measurement.",
+        "review_status": "reviewed_primary"
+      }
+    ]
+  },
+  {
+    "id": "SRC-09d6375b7c00",
+    "url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md",
+    "title": "llama.cpp build documentation",
+    "aliases": [
+      "ARCH-04"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-04",
+        "title": "llama.cpp build documentation",
+        "url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md",
+        "type": "primary_documentation",
+        "accessed_at": "2026-11-02T23:08:01.642054+01:00",
+        "claims": [
+          "Backend/build instructions are version-specific; hardware support must be checked against a pinned build."
+        ],
+        "limitations": "Do not assume modern default GPU wheels support Pascal.",
+        "review_status": "reviewed_primary"
+      }
+    ]
+  },
+  {
+    "id": "SRC-b240a40936e7",
+    "url": "https://github.com/ggml-org/whisper.cpp",
+    "title": "whisper.cpp repository",
+    "aliases": [
+      "ARCH-05"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-05",
+        "title": "whisper.cpp repository",
+        "url": "https://github.com/ggml-org/whisper.cpp",
+        "type": "primary_repository",
+        "accessed_at": "2026-11-02T23:08:01.642054+01:00",
+        "claims": [
+          "Local multilingual transcription runtime and CPU deployment candidate."
+        ],
+        "limitations": "Adult speech performance does not establish German four-year-old recognition.",
+        "review_status": "reviewed_primary"
+      }
+    ]
+  },
+  {
+    "id": "SRC-2f546cbdc2e9",
+    "url": "https://github.com/SYSTRAN/faster-whisper",
+    "title": "faster-whisper repository",
+    "aliases": [
+      "ARCH-06"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-06",
+        "title": "faster-whisper repository",
+        "url": "https://github.com/SYSTRAN/faster-whisper",
+        "type": "primary_repository",
+        "accessed_at": "2026-11-02T23:08:01.642054+01:00",
+        "claims": [
+          "Alternative local CTranslate2 transcription runtime; evaluate CPU int8 baseline."
+        ],
+        "limitations": "GPU package requirements and existing host load require checks; no child ASR test performed.",
+        "review_status": "reviewed_primary"
+      }
+    ]
+  },
+  {
+    "id": "SRC-517b39ac094e",
+    "url": "https://github.com/OHF-Voice/piper1-gpl",
+    "title": "Piper maintained runtime",
+    "aliases": [
+      "ARCH-07",
+      "COMM-S15"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-07",
+        "title": "Piper maintained runtime",
+        "url": "https://github.com/OHF-Voice/piper1-gpl",
+        "type": "primary_repository",
+        "accessed_at": "2026-11-02T23:08:01.642054+01:00",
+        "claims": [
+          "Local TTS candidate; repository uses GPL-3.0."
+        ],
+        "limitations": "Runtime and voice licenses are separate; speech quality and timing need household evaluation.",
+        "review_status": "reviewed_primary"
+      },
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S15",
+        "title": "Piper maintained engine",
+        "url": "https://github.com/OHF-Voice/piper1-gpl",
+        "type": "primary-repository",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Local neural TTS engine; repository API identifies GPL-3.0."
+        ],
+        "limitations": "Voice model licenses are separate; this is a component, not a ready Reachy realtime endpoint."
+      }
+    ]
+  },
+  {
+    "id": "SRC-48a383b82504",
+    "url": "https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/VOICES.md",
+    "title": "Piper voice documentation",
+    "aliases": [
+      "ARCH-08"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-08",
+        "title": "Piper voice documentation",
+        "url": "https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/VOICES.md",
+        "type": "primary_documentation",
+        "accessed_at": "2026-11-02T23:08:01.642054+01:00",
+        "claims": [
+          "German de_DE voices are listed; each voice has a model card."
+        ],
+        "limitations": "Select and verify a particular voice license and clarity before publishing lesson audio.",
+        "review_status": "reviewed_primary"
+      }
+    ]
+  },
+  {
+    "id": "SRC-c91dc88b8397",
+    "url": "https://github.com/dscripka/openWakeWord",
+    "title": "openWakeWord repository",
+    "aliases": [
+      "ARCH-09"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-09",
+        "title": "openWakeWord repository",
+        "url": "https://github.com/dscripka/openWakeWord",
+        "type": "primary_repository",
+        "accessed_at": "2026-11-02T23:08:01.642054+01:00",
+        "claims": [
+          "Local wake phrase detection candidate; documented packaged language support must be respected."
+        ],
+        "limitations": "A German child wake phrase is not assumed production-ready.",
+        "review_status": "reviewed_primary"
+      }
+    ]
+  },
+  {
+    "id": "SRC-122ca12ad00b",
+    "url": "https://github.com/dscripka/openWakeWord/issues/181",
+    "title": "openWakeWord non-English training issue",
+    "aliases": [
+      "ARCH-10"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-10",
+        "title": "openWakeWord non-English training issue",
+        "url": "https://github.com/dscripka/openWakeWord/issues/181",
+        "type": "primary_issue",
+        "accessed_at": "2026-11-02T23:08:01.642054+01:00",
+        "claims": [
+          "Maintainer describes English assumptions in the automatic training pipeline."
+        ],
+        "limitations": "Issue is historical; recheck selected release, do not generalize to every wake engine.",
+        "review_status": "reviewed_primary"
+      }
+    ]
+  },
+  {
+    "id": "SRC-0f01b0de0b15",
+    "url": "https://github.com/global-asp/global-asp",
+    "title": "Global ASP stories repository",
+    "aliases": [
+      "ARCH-12"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-12",
+        "title": "Global ASP stories repository",
+        "url": "https://github.com/global-asp/global-asp",
+        "type": "primary_repository",
+        "accessed_at": "2026-11-02T23:08:01.642054+01:00",
+        "claims": [
+          "German translations exist; story metadata records writers, illustrators, translators and licenses."
+        ],
+        "limitations": "Check each work and medium; some entries differ from default CC BY terms.",
+        "review_status": "reviewed_primary"
+      }
+    ]
+  },
+  {
+    "id": "SRC-377c2e9404ec",
+    "url": "https://storyweaver.org.in/en/open-content",
+    "title": "StoryWeaver open-content policy",
+    "aliases": [
+      "ARCH-13"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-13",
+        "title": "StoryWeaver open-content policy",
+        "url": "https://storyweaver.org.in/en/open-content",
+        "type": "primary_policy_search_index",
+        "accessed_at": "2026-11-02T23:08:01.642054+01:00",
+        "claims": [
+          "Search-indexed creator policy distinguishes CC BY books/illustrations from more restrictive readalongs/videos."
+        ],
+        "limitations": "Direct page fetch returned 402. Discovery lead only; verify exact work and current terms before ingestion.",
+        "review_status": "discovery_only"
+      }
+    ]
+  },
+  {
+    "id": "SRC-e456df8d0cfb",
+    "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini/v1.13.0/src/reachy_mini/reachy_mini.py",
+    "title": "Reachy SDK v1.13.0 constructor source",
+    "aliases": [
+      "ARCH-15"
+    ],
+    "reviews": [
+      {
+        "file": "research/architecture/sources.json",
+        "id": "ARCH-15",
+        "title": "Reachy SDK v1.13.0 constructor source",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini/v1.13.0/src/reachy_mini/reachy_mini.py",
+        "type": "primary_pinned_source",
+        "accessed_at": "2026-11-02T23:13:37.549232+01:00",
+        "claims": [
+          "SDK client construction includes automatic-body-yaw and media initialization, so reconnect needs explicit side-effect control."
+        ],
+        "limitations": "Verify exact transport implementation and mute/camera behavior physically; source read is not a reconnect test."
+      }
+    ]
+  },
+  {
+    "id": "SRC-b30e5a142e60",
+    "url": "https://github.com/louistrue/clawson",
+    "title": "Clawson",
+    "aliases": [
+      "COMM-S03"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S03",
+        "title": "Clawson",
+        "url": "https://github.com/louistrue/clawson",
+        "type": "primary-community-repository",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Wireless coding/work companion forked from tomrikert/clawbody.",
+          "README uses OpenAI Realtime and adds workplace focus/notification features."
+        ],
+        "limitations": "Cloud voice default does not satisfy private child-media requirement. Fork, not an independent foundation; API reports NOASSERTION license although README says Apache 2.0."
+      }
+    ]
+  },
+  {
+    "id": "SRC-61975d0025fa",
+    "url": "https://github.com/agentculture/reachy-mini-mcp",
+    "title": "Reachy Mini MCP by agentculture",
+    "aliases": [
+      "COMM-S06"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S06",
+        "title": "Reachy Mini MCP by agentculture",
+        "url": "https://github.com/agentculture/reachy-mini-mcp",
+        "type": "primary-community-repository",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "MCP robot controller with unified operate_robot and sequence support; MIT license.",
+          "Repository also contains a larger conversation stack and install/doctor tooling."
+        ],
+        "limitations": "Broad motion/power tools need a narrow broker; CLI registration is not a safety policy. Roadmap entries are not production guarantees."
+      }
+    ]
+  },
+  {
+    "id": "SRC-838917939859",
+    "url": "https://github.com/jackccrawford/reachy-mini-mcp",
+    "title": "Reachy Mini MCP by jackccrawford",
+    "aliases": [
+      "COMM-S07"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S07",
+        "title": "Reachy Mini MCP by jackccrawford",
+        "url": "https://github.com/jackccrawford/reachy-mini-mcp",
+        "type": "primary-community-repository",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Seven tools for speech/listening/camera/gestures; MIT license.",
+          "README uses Deepgram for speech and documents older daemon/Zenoh defaults."
+        ],
+        "limitations": "Cloud speech and potentially stale SDK assumptions require replacement/revalidation; a tool demo is not a child-private assistant."
+      }
+    ]
+  },
+  {
+    "id": "SRC-d33d3e861072",
+    "url": "https://github.com/castorini/rosaos",
+    "title": "rosaOS",
+    "aliases": [
+      "COMM-S08"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S08",
+        "title": "rosaOS",
+        "url": "https://github.com/castorini/rosaos",
+        "type": "primary-research-repository",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Kernel/process-service architecture mediates robot tools through MCP/ROS.",
+          "Documented setup is developed around Reachy Mini Lite."
+        ],
+        "limitations": "Useful architectural reference; adds multiple services and execution machinery. No license detected via API; not a verified Wireless/German child deployment."
+      }
+    ]
+  },
+  {
+    "id": "SRC-5da926b81ef8",
+    "url": "https://github.com/brevdev/reachy-personal-assistant",
+    "title": "Reachy personal assistant NVIDIA demo",
+    "aliases": [
+      "COMM-S09"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S09",
+        "title": "Reachy personal assistant NVIDIA demo",
+        "url": "https://github.com/brevdev/reachy-personal-assistant",
+        "type": "primary-community-repository",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "NVIDIA/Reachy personal-assistant example; Apache 2.0 per GitHub metadata."
+        ],
+        "limitations": "Demo resource/platform assumptions require separate examination; not a hardware benchmark for the existing Pascal host."
+      }
+    ]
+  },
+  {
+    "id": "SRC-cf4ffebb1ac7",
+    "url": "https://github.com/1xabhay/reachy-mini-lab",
+    "title": "Reachy Mini Lab",
+    "aliases": [
+      "COMM-S10"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S10",
+        "title": "Reachy Mini Lab",
+        "url": "https://github.com/1xabhay/reachy-mini-lab",
+        "type": "primary-community-repository",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Diagnostic/testbench repository includes a referenced command-WebSocket recovery workaround."
+        ],
+        "limitations": "GitHub API marks the repository archived. Use as diagnostic evidence, not a maintained runtime dependency."
+      }
+    ]
+  },
+  {
+    "id": "SRC-0a35c5377fd0",
+    "url": "https://github.com/phola/reachy-brain",
+    "title": "reachy-brain",
+    "aliases": [
+      "COMM-S12"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S12",
+        "title": "reachy-brain",
+        "url": "https://github.com/phola/reachy-brain",
+        "type": "primary-community-repository",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Local Wireless voice prototype uses Whisper MLX, Gemma and Kokoro."
+        ],
+        "limitations": "Apple-Silicon/M3-Max-oriented alpha with reported latency, not portable Ubuntu evidence. No detected license; no German guarantee."
+      }
+    ]
+  },
+  {
+    "id": "SRC-9207e699adc3",
+    "url": "https://github.com/huggingface/speech-to-speech",
+    "title": "Hugging Face speech-to-speech",
+    "aliases": [
+      "COMM-S13",
+      "PLAT-019"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S13",
+        "title": "Hugging Face speech-to-speech",
+        "url": "https://github.com/huggingface/speech-to-speech",
+        "type": "primary-repository",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Modular local voice-service engine with documented German controls and multiple STT/TTS backends.",
+          "Current README includes Qwen3-TTS German and Pocket TTS German; backend-specific language flags differ."
+        ],
+        "limitations": "Actual German four-year-old speech quality and CPU/Pascal support are unmeasured here; choose a complete supported component/protocol combination."
+      },
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-019",
+        "title": "Hugging Face speech-to-speech backend",
+        "url": "https://github.com/huggingface/speech-to-speech",
+        "type": "official_repository_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Swappable local VAD/STT/LLM/TTS stack serves realtime WebSocket/WebRTC; default Linux NVIDIA stack plans for 24 GB VRAM, Apple Silicon for 16 GB unified memory; CPU replies can be slow."
+        ],
+        "limitations": [
+          "Upstream defaults exceed audited available 12 GB GPU capacity; language, latency and compatibility still need local measurement; Apache-2.0 repository."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-c3c696b5bf6b",
+    "url": "https://huggingface.co/blog/local-reachy-mini-conversation",
+    "title": "Official local Reachy conversation guide",
+    "aliases": [
+      "COMM-S14"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S14",
+        "title": "Official local Reachy conversation guide",
+        "url": "https://huggingface.co/blog/local-reachy-mini-conversation",
+        "type": "official-blog",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-05-27",
+        "claims": [
+          "Shows app-on-robot and inference-on-laptop local-network pattern.",
+          "Describes a modular local voice stack rather than requiring inference on the embedded board."
+        ],
+        "limitations": "Published 2026-05-27; commands and model/resource assumptions require matching current versions."
+      }
+    ]
+  },
+  {
+    "id": "SRC-839e2fbb52c9",
+    "url": "https://huggingface.co/rhasspy/piper-voices/tree/main/de/de_DE",
+    "title": "Piper German voices",
+    "aliases": [
+      "COMM-S16"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S16",
+        "title": "Piper German voices",
+        "url": "https://huggingface.co/rhasspy/piper-voices/tree/main/de/de_DE",
+        "type": "primary-model-catalog",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "German de_DE model families are published, including Thorsten."
+        ],
+        "limitations": "Review the selected voice model card/license and evaluate naturalness and child intelligibility; catalog labels alone do not establish every model license."
+      }
+    ]
+  },
+  {
+    "id": "SRC-9a51dde9dc30",
+    "url": "https://github.com/Seeed-Solution/openvoicestream",
+    "title": "Seeed OpenVoiceStream",
+    "aliases": [
+      "COMM-S17"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S17",
+        "title": "Seeed OpenVoiceStream",
+        "url": "https://github.com/Seeed-Solution/openvoicestream",
+        "type": "primary-repository",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Current destination of the old suharvest/jetson-local-voice repository; MIT.",
+          "Provides a separately managed local voice service used by related robot work."
+        ],
+        "limitations": "Jetson/CUDA examples are not automatic Pascal compatibility. Match wire protocol and German-capable models, not just URL/port."
+      }
+    ]
+  },
+  {
+    "id": "SRC-dd53a15b6283",
+    "url": "https://github.com/segutwein/jetson-assistant",
+    "title": "German Jetson assistant fork",
+    "aliases": [
+      "COMM-S18"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S18",
+        "title": "German Jetson assistant fork",
+        "url": "https://github.com/segutwein/jetson-assistant",
+        "type": "primary-community-repository",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Documents faster-whisper, llama.cpp, Silero and Piper German configuration.",
+          "Its benchmark reports German de_DE-thorsten-high TTS on Jetson Orin Nano 8GB."
+        ],
+        "limitations": "JetPack/Orin-specific setup and timing are not target host measurements; its small.en STT benchmark is not German ASR evidence."
+      }
+    ]
+  },
+  {
+    "id": "SRC-9fd527676035",
+    "url": "https://huggingface.co/spaces/N-A-M-I-O/hello_world_local/blob/main/docs.html",
+    "title": "Hello World local fork documentation",
+    "aliases": [
+      "COMM-S19"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S19",
+        "title": "Hello World local fork documentation",
+        "url": "https://huggingface.co/spaces/N-A-M-I-O/hello_world_local/blob/main/docs.html",
+        "type": "primary-community-project",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Documents local OpenAI-compatible endpoint configuration and STT language de."
+        ],
+        "limitations": "Fork settings/documentation only; local endpoint flags do not prove zero egress or current protocol/SDK compatibility."
+      }
+    ]
+  },
+  {
+    "id": "SRC-8b862b8780ea",
+    "url": "https://www.tiinyverse.com/posts/4fd4e3a6-fa31-4759-940e-7febacabe55f",
+    "title": "Robi German child companion author report",
+    "aliases": [
+      "COMM-S20"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S20",
+        "title": "Robi German child companion author report",
+        "url": "https://www.tiinyverse.com/posts/4fd4e3a6-fa31-4759-940e-7febacabe55f",
+        "type": "primary-author-community-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-09-12",
+        "claims": [
+          "Author describes a German private child companion with thin clients, NAS orchestration/memory and separate inference host.",
+          "Predictable story replay, parent-authored routines, role-play and forgetting controls are described."
+        ],
+        "limitations": "Single-family report, not clinical or developmental efficacy evidence; some speech/image components were still pending. No public code link verified. Do not import surveillance/distress-detection promises."
+      }
+    ]
+  },
+  {
+    "id": "SRC-dd27847ddf24",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1334",
+    "title": "SDK issue 1334: motor animation corrupts STT capture",
+    "aliases": [
+      "COMM-S21"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S21",
+        "title": "SDK issue 1334: motor animation corrupts STT capture",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1334",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-08-10",
+        "claims": [
+          "Open report describes motion-associated microphone degradation and an A/B reproduction."
+        ],
+        "limitations": "Single reported Wireless environment names Pi 5; verify stock CM4 applicability. DSP-causation narrative is a hypothesis, not a vendor-confirmed universal diagnosis."
+      }
+    ]
+  },
+  {
+    "id": "SRC-fac5e4a16529",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1462",
+    "title": "SDK issue 1462: interruption leaves playback queued",
+    "aliases": [
+      "COMM-S22",
+      "PLAT-036"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S22",
+        "title": "SDK issue 1462: interruption leaves playback queued",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1462",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-10-13",
+        "claims": [
+          "Open report on Wireless 1.11.0 traces audio surviving clear_player beyond an audiomixer."
+        ],
+        "limitations": "No fix verified in this pass. Callback completion is not proof that physical sound has stopped."
+      },
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-036",
+        "title": "reachy_mini #1462: Barge-in on the local audio backend lets queued speech play after clear_player()",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1462",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Reporter observes queued speech surviving clear_player interruption.",
+          "Observed state open, created 2026-10-13T16:02:59Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-a57ed13ae7ec",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1459",
+    "title": "SDK issue 1459: WebRTC phoneme clipping",
+    "aliases": [
+      "COMM-S23",
+      "PLAT-038"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S23",
+        "title": "SDK issue 1459: WebRTC phoneme clipping",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1459",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-10-13",
+        "claims": [
+          "Open Wireless report reproduces intermittent clipping with SDK-only playback and documents a small paced-submission comparison."
+        ],
+        "limitations": "Reporter explicitly has SDK/daemon version mismatch and insufficient trials to establish an idle or pacing fix."
+      },
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-038",
+        "title": "reachy_mini #1459: Wireless WebRTC playback intermittently skips phonemes after idle",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1459",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Reporter observes omitted phonemes after idle in Wireless playback.",
+          "Observed state open, created 2026-10-13T12:56:30Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-9090a24ae993",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1494",
+    "title": "SDK issue 1494: command socket lacks reconnect",
+    "aliases": [
+      "COMM-S24",
+      "PLAT-035"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S24",
+        "title": "SDK issue 1494: command socket lacks reconnect",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1494",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-10-21",
+        "claims": [
+          "Open report: host stall triggers command-WebSocket loss while robot status and WebRTC audio remain alive."
+        ],
+        "limitations": "No built-in reconnect fix verified; automatic motor re-enable from a workaround is inappropriate to copy blindly near a child."
+      },
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-035",
+        "title": "reachy_mini #1494: SDK command websocket: keepalive timeout isn't configurable and there is no reconnect",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1494",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Reporter identifies command WebSocket keepalive/reconnect limitations.",
+          "Observed state open, created 2026-10-21T19:06:50Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-583ce5bfb7a8",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1523",
+    "title": "SDK issue 1523: stopped app remains stopping",
+    "aliases": [
+      "COMM-S25",
+      "PLAT-031"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S25",
+        "title": "SDK issue 1523: stopped app remains stopping",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1523",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-10-29",
+        "claims": [
+          "Open Wireless 1.13.0 report links post-stop pose exception to stale app-manager state blocking restarts."
+        ],
+        "limitations": "Suggested patch is not a shipped fix. Daemon restart was reporter recovery, not a first-line response to every app error."
+      },
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-031",
+        "title": "reachy_mini #1523: AppManager.stop_current_app leaves the app stuck in \"stopping\" when the post-stop pose check raises",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1523",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "App can remain STOPPING after post-stop failure on Wireless 1.13.0.",
+          "Observed state open, created 2026-10-29T18:02:04Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-32b233684fa6",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1080",
+    "title": "SDK issue 1080: remote USB audio config locality",
+    "aliases": [
+      "COMM-S26"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S26",
+        "title": "SDK issue 1080: remote USB audio config locality",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1080",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-05-04",
+        "claims": [
+          "Historical closed issue documents remote WebRTC client trying to configure the robot audio board via local laptop USB."
+        ],
+        "limitations": "Closed status alone does not identify the fixed package/version; inspect installed behavior before applying historical advice."
+      }
+    ]
+  },
+  {
+    "id": "SRC-81706aba4f0c",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1402",
+    "title": "SDK issue 1402: battery input-voltage latch",
+    "aliases": [
+      "COMM-S27"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S27",
+        "title": "SDK issue 1402: battery input-voltage latch",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1402",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-09-08",
+        "claims": [
+          "Open Wireless report describes servo torque loss on battery while daemon appears healthy."
+        ],
+        "limitations": "Direct serial probing requires stopping the daemon and is not a concurrent self-heal action. Hardware diagnosis remains owner/vendor work."
+      }
+    ]
+  },
+  {
+    "id": "SRC-81d02b4d8f58",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1479",
+    "title": "SDK issue 1479: body yaw limit-cycle hunt",
+    "aliases": [
+      "COMM-S28"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S28",
+        "title": "SDK issue 1479: body yaw limit-cycle hunt",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1479",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-10-20",
+        "claims": [
+          "Open Wireless 1.12.0 report describes idle yaw oscillation and a local gain-change experiment."
+        ],
+        "limitations": "One robot experiment; do not automatically change gains, calibration or hardware safety limits."
+      }
+    ]
+  },
+  {
+    "id": "SRC-dcb83aae65a6",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1478",
+    "title": "SDK issue 1478: sleep torque-cut settling",
+    "aliases": [
+      "COMM-S29"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S29",
+        "title": "SDK issue 1478: sleep torque-cut settling",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1478",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-10-20",
+        "claims": [
+          "Open Wireless 1.12.0 report measures a small second head drop after sleep torque release."
+        ],
+        "limitations": "No general firmware fix established; do not repeatedly exercise a suspect mechanism or auto-adjust sleep geometry."
+      }
+    ]
+  },
+  {
+    "id": "SRC-f067a4844e55",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1493",
+    "title": "SDK issue 1493: ONNX dependency conflict",
+    "aliases": [
+      "COMM-S30",
+      "PLAT-041"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S30",
+        "title": "SDK issue 1493: ONNX dependency conflict",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1493",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-10-21",
+        "claims": [
+          "Open report describes incompatible Reachy/Pipecat onnxruntime requirements under dashboard app installation."
+        ],
+        "limitations": "Editable overrides can differ from dashboard resolver behavior. Isolate/reproduce before selecting pins; no production dependency auto-repair."
+      },
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-041",
+        "title": "reachy_mini #1493: Exact onnxruntime==1.27.0 core pin makes Pipecat-based apps uninstallable from the dashboard",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1493",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Reporter identifies pinned ONNX Runtime dependency conflict with Pipecat apps.",
+          "Observed state open, created 2026-10-21T19:06:48Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-cb4f57e0cff9",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1527",
+    "title": "SDK issue 1527: early target-state HTTP 500",
+    "aliases": [
+      "COMM-S31"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S31",
+        "title": "SDK issue 1527: early target-state HTTP 500",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1527",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-10-30",
+        "claims": [
+          "Open Wireless 1.13.0 report: optional target-head-pose query fails before any target exists."
+        ],
+        "limitations": "A single optional field error is not whole-daemon unavailability; no need to move robot just to satisfy a monitor."
+      }
+    ]
+  },
+  {
+    "id": "SRC-d65c8270479a",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1525",
+    "title": "SDK issue 1525: simulation audiomixer crash",
+    "aliases": [
+      "COMM-S32",
+      "PLAT-040"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S32",
+        "title": "SDK issue 1525: simulation audiomixer crash",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1525",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-10-30",
+        "claims": [
+          "Open report describes macOS simulation GStreamer output-format conversion segfault."
+        ],
+        "limitations": "Reported laptop-speaker/simulation issue, not proven on Wireless audio hardware; proposed caps change is not a verified production fix."
+      },
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-040",
+        "title": "reachy_mini #1525: Playback audiomixer output not pinned → intermittent segfault in GStreamer per-pad conversion (sim on laptop speaker)",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1525",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Reporter describes GStreamer simulation playback crash on macOS laptop speakers, not robot-card reproduction.",
+          "Observed state open, created 2026-10-30T13:09:06Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-e2fa9dcbbeee",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1115",
+    "title": "SDK issue 1115: Wireless disappears from LAN",
+    "aliases": [
+      "COMM-S33"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S33",
+        "title": "SDK issue 1115: Wireless disappears from LAN",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1115",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-05-11",
+        "claims": [
+          "Historical report distinguishes full LAN/ARP disappearance from an app or daemon-only outage."
+        ],
+        "limitations": "Closed June 2026; no universal recovery cause established here. Green PSU LED alone does not establish working compute/power."
+      }
+    ]
+  },
+  {
+    "id": "SRC-589c1e213287",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1465",
+    "title": "SDK issue 1465: remote relay post-authentication failure",
+    "aliases": [
+      "COMM-S34"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S34",
+        "title": "SDK issue 1465: remote relay post-authentication failure",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1465",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-10-14",
+        "claims": [
+          "Open Wireless 1.11.0 report has authenticated HF status but failed relay; reporter reboot restored remote visibility."
+        ],
+        "limitations": "Cloud relay state is separate from local-LAN health and is unnecessary for the proposed private household audio path."
+      }
+    ]
+  },
+  {
+    "id": "SRC-d4035b95f64b",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1425",
+    "title": "SDK issue 1425: silent physical microphone",
+    "aliases": [
+      "COMM-S35"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S35",
+        "title": "SDK issue 1425: silent physical microphone",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1425",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-09-16",
+        "claims": [
+          "Open report: USB/ALSA enumeration and speaker work while raw capture remains silent; cable inspection did not restore it."
+        ],
+        "limitations": "Warranty/support report, not confirmed diagnosis of another unit. Do not publish family audio or invoice data in support logs."
+      }
+    ]
+  },
+  {
+    "id": "SRC-a8d7134f14e5",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1322",
+    "title": "SDK issue 1322: Lite USB child de-enumerates",
+    "aliases": [
+      "COMM-S36"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S36",
+        "title": "SDK issue 1322: Lite USB child de-enumerates",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1322",
+        "type": "primary-issue-report",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-08-06",
+        "claims": [
+          "Open Lite/Linux report: audio USB child disappears while hub/camera/controller remain."
+        ],
+        "limitations": "Lite-only case retained for diagnostic distinction; not evidence that the purchased Wireless has this fault."
+      }
+    ]
+  },
+  {
+    "id": "SRC-643cd362da41",
+    "url": "https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app/discussions/20",
+    "title": "HF discussion 20: voice satellite listening hang",
+    "aliases": [
+      "COMM-S37"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S37",
+        "title": "HF discussion 20: voice satellite listening hang",
+        "url": "https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app/discussions/20",
+        "type": "primary-community-discussion",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-09-01",
+        "claims": [
+          "A Wireless HA satellite report separates wake detection, media streaming and motion-latch faults."
+        ],
+        "limitations": "Reported app/HA/SDK combination; hypotheses are not vendor-confirmed current behavior. Do not assume every latest version combination is compatible."
+      }
+    ]
+  },
+  {
+    "id": "SRC-593dcebedbd1",
+    "url": "https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app/discussions/19",
+    "title": "HF discussion 19: jsonrpc import failure",
+    "aliases": [
+      "COMM-S38"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S38",
+        "title": "HF discussion 19: jsonrpc import failure",
+        "url": "https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app/discussions/19",
+        "type": "primary-community-discussion",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-08-05",
+        "claims": [
+          "Users report missing reachy_mini.io.jsonrpc import; replies mention daemon update or environment reset."
+        ],
+        "limitations": "Anecdotal fixes; destructive environment resets need backups and a reviewed owner maintenance step."
+      }
+    ]
+  },
+  {
+    "id": "SRC-17ace8ff8cd1",
+    "url": "https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app/discussions/16",
+    "title": "HF discussion 16: local backend plans",
+    "aliases": [
+      "COMM-S39"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S39",
+        "title": "HF discussion 16: local backend plans",
+        "url": "https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app/discussions/16",
+        "type": "primary-community-discussion",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-04-27",
+        "claims": [
+          "Historical official/community discussion about modular local VAD/STT/LLM/TTS."
+        ],
+        "limitations": "Roadmap discussion predates current repo capabilities; use current docs for installation."
+      }
+    ]
+  },
+  {
+    "id": "SRC-d2f0d9116c34",
+    "url": "https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app/discussions/15",
+    "title": "HF discussion 15: fully local prototype",
+    "aliases": [
+      "COMM-S40"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S40",
+        "title": "HF discussion 15: fully local prototype",
+        "url": "https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app/discussions/15",
+        "type": "primary-community-discussion",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-04-06",
+        "claims": [
+          "Author links phola/reachy-brain and reports approximately three-second local exchanges on M3 Max."
+        ],
+        "limitations": "Single-author alpha benchmark, not Ubuntu/Pascal or child-German evidence."
+      }
+    ]
+  },
+  {
+    "id": "SRC-4d2c2aca4e9b",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tq4x48/reachy_mini_goes_fully_local",
+    "title": "Reddit LocalLLaMA: official local stack announcement",
+    "aliases": [
+      "COMM-S41"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S41",
+        "title": "Reddit LocalLLaMA: official local stack announcement",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tq4x48/reachy_mini_goes_fully_local/",
+        "type": "reddit-discussion",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-05-28",
+        "claims": [
+          "Maintainer announcement links official local guide/repo; comments discuss duplicated transcripts, interruption and multilingual behavior."
+        ],
+        "limitations": "Anecdotes and dated component combinations; no model comparison reproduced. Follow primary sources for stack decisions."
+      }
+    ]
+  },
+  {
+    "id": "SRC-20c344def2ed",
+    "url": "https://www.reddit.com/r/robotics/comments/1u6d7d0/eyes_ears_and_a_voice_building_reachy_minis_media",
+    "title": "Reddit robotics: media stack discussion",
+    "aliases": [
+      "COMM-S42"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S42",
+        "title": "Reddit robotics: media stack discussion",
+        "url": "https://www.reddit.com/r/robotics/comments/1u6d7d0/eyes_ears_and_a_voice_building_reachy_minis_media/",
+        "type": "reddit-discussion",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-06",
+        "claims": [
+          "Discussion points to Pollen technical media-stack article and cross-platform latency work."
+        ],
+        "limitations": "Discussion/discovery source, not operational validation of this household."
+      }
+    ]
+  },
+  {
+    "id": "SRC-4be22cc09585",
+    "url": "https://www.reddit.com/r/localaiapps/comments/1wf52u4/reachy_mini_amazing_to_build_with_the_kid_painful",
+    "title": "Reddit application setup experience",
+    "aliases": [
+      "COMM-S43"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S43",
+        "title": "Reddit application setup experience",
+        "url": "https://www.reddit.com/r/localaiapps/comments/1wf52u4/reachy_mini_amazing_to_build_with_the_kid_painful/",
+        "type": "reddit-discussion",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Parent reports good kit assembly but account/download/cloud-provider friction and local-service adaptation."
+        ],
+        "limitations": "Cross-posted narrative also appears in LocalLLaMA; do not count it as independent corroboration. Region and older app assumptions matter."
+      }
+    ]
+  },
+  {
+    "id": "SRC-d92d18e24c46",
+    "url": "https://www.reddit.com/r/robotics/comments/1w212jt/reachy_mini_persian",
+    "title": "Reddit robotics Persian post",
+    "aliases": [
+      "COMM-S44"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S44",
+        "title": "Reddit robotics Persian post",
+        "url": "https://www.reddit.com/r/robotics/comments/1w212jt/reachy_mini_persian/",
+        "type": "reddit-discussion",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Topic was discovered while surveying non-English speech experience."
+        ],
+        "limitations": "Body is deleted on opened page; search snippet is not retained as technical evidence."
+      }
+    ]
+  },
+  {
+    "id": "SRC-087590c6b154",
+    "url": "https://discuss.huggingface.co/t/participant-recruitment-human-robot-interaction-study-10-15-min/176685",
+    "title": "HF HRI study recruitment",
+    "aliases": [
+      "COMM-S45"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S45",
+        "title": "HF HRI study recruitment",
+        "url": "https://discuss.huggingface.co/t/participant-recruitment-human-robot-interaction-study-10-15-min/176685",
+        "type": "forum-discussion",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-06-10",
+        "claims": [
+          "Student HRI recruitment uses Reachy video clips and perceived interaction-quality questionnaire."
+        ],
+        "limitations": "Not a child-learning trial or evidence of educational benefit."
+      }
+    ]
+  },
+  {
+    "id": "SRC-d4b47ca9c148",
+    "url": "https://www.roboternetz.de/community/threads/80525-lokale-KI?p=672724",
+    "title": "Roboternetz local AI discussion",
+    "aliases": [
+      "COMM-S46"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S46",
+        "title": "Roboternetz local AI discussion",
+        "url": "https://www.roboternetz.de/community/threads/80525-lokale-KI?p=672724",
+        "type": "forum-discussion",
+        "accessed_at": "2026-11-02",
+        "source_date": "2026-07/08",
+        "claims": [
+          "German robotics forum links the official Reachy local voice guide in a discussion of local robot AI/privacy."
+        ],
+        "limitations": "General peer discussion; forum banner says shutdown scheduled 2026-11-09, so durable paraphrases should retain canonical upstream URLs."
+      }
+    ]
+  },
+  {
+    "id": "SRC-ce8204c195f2",
+    "url": "https://github.com/pollen-robotics/reachy_mini/blob/main/docs/source/troubleshooting.md",
+    "title": "Official Reachy troubleshooting",
+    "aliases": [
+      "COMM-S47"
+    ],
+    "reviews": [
+      {
+        "file": "research/community/sources.json",
+        "id": "COMM-S47",
+        "title": "Official Reachy troubleshooting",
+        "url": "https://github.com/pollen-robotics/reachy_mini/blob/main/docs/source/troubleshooting.md",
+        "type": "official-documentation",
+        "accessed_at": "2026-11-02",
+        "source_date": null,
+        "claims": [
+          "Wireless is LAN-controlled, not a Lite-style USB peripheral; hardware faults and app faults need distinct diagnosis."
+        ],
+        "limitations": "Guide includes destructive maintenance options; translate them into reviewed maintenance actions, not automatic recovery commands."
+      }
+    ]
+  },
+  {
+    "id": "SRC-0e444b7ff270",
+    "url": "https://www.naeyc.org/node/3796",
+    "title": "Principles of Child Development and Learning and Implications That Inform Practice",
+    "aliases": [
+      "L01"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L01",
+        "title": "Principles of Child Development and Learning and Implications That Inform Practice",
+        "url": "https://www.naeyc.org/node/3796",
+        "type": "professional_guidance",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": null,
+        "claims": [
+          "Guided play combines child agency with purposeful adult scaffolding.",
+          "Play and meaningful relationships belong in early-learning design."
+        ],
+        "limitations": [
+          "Broad educational guidance; not an evaluation of Reachy or a generative model."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-a4255911493b",
+    "url": "https://www.naeyc.org/sites/default/files/globally-shared/downloads/PDFs/resources/topics/ps_technology.pdf",
+    "title": "Technology and Interactive Media as Tools in Early Childhood Programs Serving Children from Birth through Age 8",
+    "aliases": [
+      "L02"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L02",
+        "title": "Technology and Interactive Media as Tools in Early Childhood Programs Serving Children from Birth through Age 8",
+        "url": "https://www.naeyc.org/sites/default/files/globally-shared/downloads/PDFs/resources/topics/ps_technology.pdf",
+        "type": "professional_position_statement",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": "2012-01",
+        "claims": [
+          "Technology use should be intentional, appropriate to the individual and context, and support human relationships."
+        ],
+        "limitations": [
+          "Adopted in 2012; does not establish modern AI safety or endorse products."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-ed7e81bf6dd5",
+    "url": "https://www.fruehe-chancen.de/en/informationen-fuer-fachkraefte/uebergreifende-themen-im-kita-alltag/sprachliche-bildung/was-ist-alltagsintegrierte-sprachliche-bildung",
+    "title": "Was ist alltagsintegrierte sprachliche Bildung?",
+    "aliases": [
+      "L04"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L04",
+        "title": "Was ist alltagsintegrierte sprachliche Bildung?",
+        "url": "https://www.fruehe-chancen.de/en/informationen-fuer-fachkraefte/uebergreifende-themen-im-kita-alltag/sprachliche-bildung/was-ist-alltagsintegrierte-sprachliche-bildung",
+        "type": "official_education_guidance",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": null,
+        "claims": [
+          "Everyday dialogue, action and relationships with caregivers are central to early language experience."
+        ],
+        "limitations": [
+          "The /en/ URL serves German content; not a German-ASR benchmark or proof of robotic language learning."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-72c02757cd0c",
+    "url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2021.676248/full",
+    "title": "Individual Differences in Children’s (Language) Learning Skills Moderate Effects of Robot-Assisted Second Language Learning",
+    "aliases": [
+      "L05"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L05",
+        "title": "Individual Differences in Children’s (Language) Learning Skills Moderate Effects of Robot-Assisted Second Language Learning",
+        "url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2021.676248/full",
+        "type": "primary_peer_reviewed_study",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": "2021-08-24",
+        "claims": [
+          "Study of 193 Dutch five-year-olds found vocabulary-training gains but no overall difference among tablet-only and robot-assisted experimental conditions.",
+          "Experimenter intervention handled speech detection."
+        ],
+        "limitations": [
+          "Study-specific NAO/tablet procedure; not autonomous Reachy testing, not German-only age-four learning efficacy."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-7672a2ac883a",
+    "url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2021.676123/full",
+    "title": "Do Shy Preschoolers Interact Differently When Learning Language With a Social Robot?",
+    "aliases": [
+      "L06"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L06",
+        "title": "Do Shy Preschoolers Interact Differently When Learning Language With a Social Robot?",
+        "url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2021.676123/full",
+        "type": "primary_peer_reviewed_study",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": "2021-05-31",
+        "claims": [
+          "Controlled preschool study used caregiver warm-up, explanation of movement/noise and repeated encounters.",
+          "Familiarity and testing context affected observed behavior and performance."
+        ],
+        "limitations": [
+          "Small analyzed sample; not a method to automatically label a child’s temperament or diagnose their emotional state."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-00aee570321f",
+    "url": "https://arxiv.org/html/2404.17394v2",
+    "title": "Child Speech Recognition in Human-Robot Interaction: Problem Solved?",
+    "aliases": [
+      "L07"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L07",
+        "title": "Child Speech Recognition in Human-Robot Interaction: Problem Solved?",
+        "url": "https://arxiv.org/html/2404.17394v2",
+        "type": "primary_research_preprint",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": "2024-11-19",
+        "claims": [
+          "In a reanalysis of an English child-speech dataset, recognition remained imperfect and depended on context, utterance type and microphone.",
+          "Structured interaction can help but cannot justify silently forcing a child’s answer."
+        ],
+        "limitations": [
+          "Small older English dataset, tested 2024 engines and study hardware; not current German/Wireless Reachy performance."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-0027bd256de1",
+    "url": "https://arxiv.org/abs/2501.06478",
+    "title": "Speech Recognition for Automatically Assessing Afrikaans and isiXhosa Preschool Oral Narratives",
+    "aliases": [
+      "L08"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L08",
+        "title": "Speech Recognition for Automatically Assessing Afrikaans and isiXhosa Preschool Oral Narratives",
+        "url": "https://arxiv.org/abs/2501.06478",
+        "type": "primary_research_preprint",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": "2025-01-11",
+        "claims": [
+          "Preschool non-English ASR requires language- and age-specific validation."
+        ],
+        "limitations": [
+          "Abstract inspected; languages are Afrikaans and isiXhosa, not German; no model should be selected for this deployment solely from it."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-892e37140d95",
+    "url": "https://arxiv.org/abs/2503.15762",
+    "title": "Dialogic Learning in Child-Robot Interaction: A Hybrid Approach to Personalized Educational Content Generation",
+    "aliases": [
+      "L09"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L09",
+        "title": "Dialogic Learning in Child-Robot Interaction: A Hybrid Approach to Personalized Educational Content Generation",
+        "url": "https://arxiv.org/abs/2503.15762",
+        "type": "primary_research_preprint",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": "2025-03-20",
+        "claims": [
+          "Proposes combining rule-based dialogue with selective offline LLM content generation and human validation."
+        ],
+        "limitations": [
+          "Framework/example, not evidence of long-term learning improvement for this four-year-old or a safety certification."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-3d5ad93b26c3",
+    "url": "https://arxiv.org/abs/2405.03889",
+    "title": "ContextQ: Generated Questions to Support Meaningful Parent-Child Dialogue While Co-Reading",
+    "aliases": [
+      "L10"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L10",
+        "title": "ContextQ: Generated Questions to Support Meaningful Parent-Child Dialogue While Co-Reading",
+        "url": "https://arxiv.org/abs/2405.03889",
+        "type": "primary_research_preprint",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": "2024-05-06",
+        "claims": [
+          "Study with 12 parent-child dyads aged 4–6 explored generated questions that support caregiver co-reading dialogue."
+        ],
+        "limitations": [
+          "Small tablet-based study; conversational outcomes are not proof of durable learning gains or robot effectiveness."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-7b7ea40e5242",
+    "url": "https://www.unicef.org/innocenti/reports/policy-guidance-ai-children",
+    "title": "UNICEF Guidance on AI and Children 3.0",
+    "aliases": [
+      "L11"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L11",
+        "title": "UNICEF Guidance on AI and Children 3.0",
+        "url": "https://www.unicef.org/innocenti/reports/policy-guidance-ai-children",
+        "type": "official_child_rights_guidance",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": "2025-12",
+        "claims": [
+          "Guidance includes safety, child privacy, inclusion, transparency and child well-being, with explicit attention to companion risks."
+        ],
+        "limitations": [
+          "Policy/design guidance; no compliance determination for this private installation."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-4c9b535ca249",
+    "url": "https://www.unicef.org/media/181136/file/UNICEF-When-AI-becomes-friend-Business-recommendations-2026.pdf",
+    "title": "When AI becomes a friend: UNICEF recommendations for business on AI chatbots and companions",
+    "aliases": [
+      "L12"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L12",
+        "title": "When AI becomes a friend: UNICEF recommendations for business on AI chatbots and companions",
+        "url": "https://www.unicef.org/media/181136/file/UNICEF-When-AI-becomes-friend-Business-recommendations-2026.pdf",
+        "type": "official_child_rights_guidance",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": "2026-06",
+        "claims": [
+          "Recommends minimizing sensitive conversational data and avoiding dependency, exclusivity and compulsive re-engagement.",
+          "Calls for child-understandable disclosure and accessible caregiver/incident controls."
+        ],
+        "limitations": [
+          "Business guidance assessed against risks known in May 2026; applied here as design principles, not a legal checklist."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-37e21b7d5a2c",
+    "url": "https://www.naeyc.org/our-work/families/meaningful-art-projects-parents-can-fit-busy-day",
+    "title": "Meaningful Art Projects Parents Can Fit Into a Busy Day",
+    "aliases": [
+      "L13"
+    ],
+    "reviews": [
+      {
+        "file": "research/learning/sources.json",
+        "id": "L13",
+        "title": "Meaningful Art Projects Parents Can Fit Into a Busy Day",
+        "url": "https://www.naeyc.org/our-work/families/meaningful-art-projects-parents-can-fit-busy-day",
+        "type": "professional_family_guidance",
+        "accessed_at": "2026-11-02T22:09:05.035748+00:00",
+        "published_at": null,
+        "claims": [
+          "Supports open-ended making, appropriate assistance and feedback about effort/process."
+        ],
+        "limitations": [
+          "Family guidance; not a validated automated drawing-assessment method."
+        ],
+        "verification": "opened_source_page_or_document"
+      }
+    ]
+  },
+  {
+    "id": "SRC-a2dfc50418ec",
+    "url": "https://huggingface.co/docs/reachy_mini/index",
+    "title": "Reachy Mini official documentation",
+    "aliases": [
+      "PLAT-001"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-001",
+        "title": "Reachy Mini official documentation",
+        "url": "https://huggingface.co/docs/reachy_mini/index",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Wireless runs onboard CM4; Lite uses a computer USB connection; official docs now recommend JS/WebRTC for new browser apps."
+        ],
+        "limitations": [
+          "Hardware variant must be confirmed; documentation describes capability, not this robot commissioning."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-c0f7076fdf1b",
+    "url": "https://github.com/pollen-robotics/reachy_mini",
+    "title": "Reachy Mini SDK repository",
+    "aliases": [
+      "PLAT-002"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-002",
+        "title": "Reachy Mini SDK repository",
+        "url": "https://github.com/pollen-robotics/reachy_mini",
+        "type": "official_repository",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Official Python/TypeScript SDK, daemon, examples and tests; repository software license is Apache-2.0."
+        ],
+        "limitations": [
+          "Main changes can be newer than installed or tagged releases."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-fe9e67a8134e",
+    "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/main/README.md",
+    "title": "Reachy Mini conversation application README",
+    "aliases": [
+      "PLAT-003"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-003",
+        "title": "Reachy Mini conversation application README",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/main/README.md",
+        "type": "official_repository_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Current app defaults to a hosted HF realtime backend; supports explicit local WebSocket backend, external profiles/tools, local Silero VAD and experimental interruption behavior."
+        ],
+        "limitations": [
+          "Hosted defaults do not satisfy child-data-stays-home; app settings override environment defaults; default long-term memory and camera are enabled."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-70d8711eb570",
+    "url": "https://huggingface.co/docs/reachy_mini/platforms/reachy_mini/get_started",
+    "title": "Wireless setup guide",
+    "aliases": [
+      "PLAT-004"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-004",
+        "title": "Wireless setup guide",
+        "url": "https://huggingface.co/docs/reachy_mini/platforms/reachy_mini/get_started",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Onboard CM4 starts through Reachy Mini Control Wi-Fi onboarding; reachyminios_check is the provided diagnostic."
+        ],
+        "limitations": [
+          "Factory SSH setup is publicly documented; record and review commissioning credentials without exposing them in child-facing systems."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-bf5908f2f005",
+    "url": "https://huggingface.co/docs/reachy_mini/platforms/reachy_mini/hardware",
+    "title": "Wireless hardware datasheet",
+    "aliases": [
+      "PLAT-005"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-005",
+        "title": "Wireless hardware datasheet",
+        "url": "https://huggingface.co/docs/reachy_mini/platforms/reachy_mini/hardware",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Wireless includes CM4, camera, speaker and four-microphone XMOS array; microphone maximum sample rate is 16 kHz."
+        ],
+        "limitations": [
+          "Not a child-safety certification; no local language-model performance guarantee."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-5ba54ce164ef",
+    "url": "https://huggingface.co/docs/reachy_mini/SDK/media-architecture",
+    "title": "Unified media architecture",
+    "aliases": [
+      "PLAT-006"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-006",
+        "title": "Unified media architecture",
+        "url": "https://huggingface.co/docs/reachy_mini/SDK/media-architecture",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Daemon owns physical media; on-robot clients use LOCAL media, remote clients use WebRTC; local camera IPC is rate-capped."
+        ],
+        "limitations": [
+          "A LAN media path must be verified by packet-flow testing; browser central signaling is a different path."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-caf3ea486040",
+    "url": "https://huggingface.co/docs/reachy_mini/SDK/javascript-sdk",
+    "title": "JavaScript SDK runtime reference",
+    "aliases": [
+      "PLAT-007"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-007",
+        "title": "JavaScript SDK runtime reference",
+        "url": "https://huggingface.co/docs/reachy_mini/SDK/javascript-sdk",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Browser SDK uses WebRTC plus HF OAuth/central signaling and host/embed lifecycle; microphone tracks require explicit handling."
+        ],
+        "limitations": [
+          "Default browser onboarding is not a fully offline/private-LAN guarantee; pin matching SDK/host/daemon."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-9a877357ddc7",
+    "url": "https://huggingface.co/docs/reachy_mini/SDK/apps",
+    "title": "Building and publishing apps",
+    "aliases": [
+      "PLAT-008"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-008",
+        "title": "Building and publishing apps",
+        "url": "https://huggingface.co/docs/reachy_mini/SDK/apps",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Daemon manages Python app subprocesses, stop signals and one active app slot; app CLI provides supported scaffolds."
+        ],
+        "limitations": [
+          "Wireless apps share an app environment; concurrent hardware owners and incompatible dependencies can conflict."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-b6c28fb93c89",
+    "url": "https://huggingface.co/docs/reachy_mini/SDK/lifecycle-contract",
+    "title": "Wake and sleep lifecycle contract",
+    "aliases": [
+      "PLAT-009"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-009",
+        "title": "Wake and sleep lifecycle contract",
+        "url": "https://huggingface.co/docs/reachy_mini/SDK/lifecycle-contract",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Platform layer owns session wake/sleep; daemon idle reset handles abandoned sessions; cleanup belongs to the app."
+        ],
+        "limitations": [
+          "Contract concerns current JS host path; crash recovery can physically park the robot and must be tested away from child hands."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-ea3cf528ed47",
+    "url": "https://huggingface.co/docs/reachy_mini/SDK/core-concept",
+    "title": "Core concepts and motion limits",
+    "aliases": [
+      "PLAT-010"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-010",
+        "title": "Core concepts and motion limits",
+        "url": "https://huggingface.co/docs/reachy_mini/SDK/core-concept",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Client/server daemon separation; software clamps head/body pose; current core table gives body yaw within plus/minus 160 degrees and yaw delta 65 degrees."
+        ],
+        "limitations": [
+          "FAQ differs on body yaw; soft/gravity compensation requires Placo and is not stock Wireless behavior; limits are not external-contact safety."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-bc90616e067a",
+    "url": "https://huggingface.co/docs/reachy_mini/troubleshooting",
+    "title": "Official troubleshooting FAQ",
+    "aliases": [
+      "PLAT-011"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-011",
+        "title": "Official troubleshooting FAQ",
+        "url": "https://huggingface.co/docs/reachy_mini/troubleshooting",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "FAQ covers power/cables, media, naming/discovery, firmware and environment repair; Wireless USB is not the Lite USB control path."
+        ],
+        "limitations": [
+          "Contains older provider claims and inconsistent body-yaw examples; do not automatically apply blanket updates, power cycling or destructive resets."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-a0f60b262139",
+    "url": "https://huggingface.co/docs/reachy_mini/troubleshooting/motors_diagnosis",
+    "title": "Motor diagnosis guide",
+    "aliases": [
+      "PLAT-012"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-012",
+        "title": "Motor diagnosis guide",
+        "url": "https://huggingface.co/docs/reachy_mini/troubleshooting/motors_diagnosis",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Testbench can scan/check motor configuration; motor-backend ownership must be released for diagnostics."
+        ],
+        "limitations": [
+          "Motor repair, configuration writes or reflashing are adult maintenance, never routine self-healing."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-4b398480186b",
+    "url": "https://huggingface.co/docs/reachy_mini/platforms/reachy_mini/media_advanced_controls",
+    "title": "Wireless advanced media controls",
+    "aliases": [
+      "PLAT-013"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-013",
+        "title": "Wireless advanced media controls",
+        "url": "https://huggingface.co/docs/reachy_mini/platforms/reachy_mini/media_advanced_controls",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "XMOS array provides hardware echo cancellation; documented camera/audio diagnostics and controls exist."
+        ],
+        "limitations": [
+          "Keep tuning changes measured/reversible; direct media access must not compete with daemon ownership."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-6b8afa6d86a8",
+    "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini_homeassistant/main/README.md",
+    "title": "Official Home Assistant integration README",
+    "aliases": [
+      "PLAT-014"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-014",
+        "title": "Official Home Assistant integration README",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini_homeassistant/main/README.md",
+        "type": "official_repository_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "HACS custom integration exposes monitoring, camera, volume, app, motion and daemon controls; server-side camera uses WebRTC."
+        ],
+        "limitations": [
+          "Integration is not merely read-only; installing it does not grant a child permission to every entity or restart action."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-5f60766f41f2",
+    "url": "https://huggingface.co/docs/reachy_mini/integrations/home_assistant",
+    "title": "SDK Home Assistant discovery contract",
+    "aliases": [
+      "PLAT-015"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-015",
+        "title": "SDK Home Assistant discovery contract",
+        "url": "https://huggingface.co/docs/reachy_mini/integrations/home_assistant",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "mDNS service and robot ID enable discovery; consumers poll separate REST routes and tolerate individual missing endpoints."
+        ],
+        "limitations": [
+          "LAN-only daemon trust and no app-level authentication are documented; no Internet exposure implied."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-8261f903c08c",
+    "url": "https://huggingface.co/docs/reachy_mini/SDK/telemetry",
+    "title": "Daemon telemetry policy",
+    "aliases": [
+      "PLAT-016"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-016",
+        "title": "Daemon telemetry policy",
+        "url": "https://huggingface.co/docs/reachy_mini/SDK/telemetry",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Anonymous usage telemetry is enabled by default and can be disabled through settings, config, API or documented environment variables."
+        ],
+        "limitations": [
+          "Telemetry disclosure does not cover the privacy policy of speech/vision/model providers or custom diagnostic capture."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-97e1c6287fe7",
+    "url": "https://huggingface.co/docs/reachy_mini/platforms/simulation/get_started",
+    "title": "MuJoCo simulation guide",
+    "aliases": [
+      "PLAT-017"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-017",
+        "title": "MuJoCo simulation guide",
+        "url": "https://huggingface.co/docs/reachy_mini/platforms/simulation/get_started",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "MuJoCo enables robot development without hardware; simulation uses system audio/software echo cancellation."
+        ],
+        "limitations": [
+          "Does not prove physical motor, mic-array, acoustic or child interruption performance."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-8da5981911e3",
+    "url": "https://huggingface.co/docs/reachy_mini/SDK/cloud-backend-consumer",
+    "title": "Cloud backend consumer",
+    "aliases": [
+      "PLAT-018"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-018",
+        "title": "Cloud backend consumer",
+        "url": "https://huggingface.co/docs/reachy_mini/SDK/cloud-backend-consumer",
+        "type": "official_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Central consumer is an aiortc camera/control client; central relay allows one consumer and documents TURN limitations."
+        ],
+        "limitations": [
+          "Do not choose a cloud media consumer for strict local child-data mode; central camera consumer is not equivalent to local full audio SDK."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-553aaa6f04a3",
+    "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini/main/src/reachy_mini/reachy_mini.py",
+    "title": "Python ReachyMini constructor source",
+    "aliases": [
+      "PLAT-020"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-020",
+        "title": "Python ReachyMini constructor source",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini/main/src/reachy_mini/reachy_mini.py",
+        "type": "official_source_code",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Explicit host and connection_mode=network pin a remote daemon; default media chooses local IPC or remote WebRTC; release_media/acquire_media manage hardware ownership."
+        ],
+        "limitations": [
+          "Main source is not assurance of installed-tag compatibility; auto mode could select a local daemon instead of intended robot."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-f09c0f05965a",
+    "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini/main/ts/APP_CREATION_GUIDE.md",
+    "title": "JS app creation guide",
+    "aliases": [
+      "PLAT-022"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-022",
+        "title": "JS app creation guide",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini/main/ts/APP_CREATION_GUIDE.md",
+        "type": "official_repository_documentation",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Canonical guide for JS app scaffold and host/embed integration."
+        ],
+        "limitations": [
+          "Candidate alternative to Python onboard app; remote signaling and ownership paths need privacy review."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-2b87aaa02829",
+    "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/main/pyproject.toml",
+    "title": "Conversation app package metadata",
+    "aliases": [
+      "PLAT-023"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-023",
+        "title": "Conversation app package metadata",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/main/pyproject.toml",
+        "type": "official_source_code",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Current package identifies version 1.1.1, Python >=3.11, and SDK dependency >=1.11.0."
+        ],
+        "limitations": [
+          "Broad dependency bounds do not prove a tested combined deployment; lock and stage exact versions."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-e3fac3643815",
+    "url": "https://huggingface.co/api/spaces?filter=reachy_mini&limit=100&sort=likes&direction=-1",
+    "title": "Hugging Face Reachy-tagged app discovery",
+    "aliases": [
+      "PLAT-024"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-024",
+        "title": "Hugging Face Reachy-tagged app discovery",
+        "url": "https://huggingface.co/api/spaces?filter=reachy_mini&limit=100&sort=likes&direction=-1",
+        "type": "first_party_registry",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Registry request returned 100 tagged apps; metadata snapshot provides leads for stories, play, language tutoring and integrations."
+        ],
+        "limitations": [
+          "Capped sample, not all projects; tags, likes or availability do not prove safety, quality or maintenance."
+        ],
+        "evidence_level": "discovery_only"
+      }
+    ]
+  },
+  {
+    "id": "SRC-9178c504c522",
+    "url": "https://api.github.com/orgs/pollen-robotics/repos?per_page=100&sort=updated",
+    "title": "Pollen Robotics repository directory",
+    "aliases": [
+      "PLAT-025"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-025",
+        "title": "Pollen Robotics repository directory",
+        "url": "https://api.github.com/orgs/pollen-robotics/repos?per_page=100&sort=updated",
+        "type": "first_party_registry",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Directory sample identifies 20 Mini-related repositories spanning SDK, OS, desktop/mobile apps, controls, motion and developer tooling."
+        ],
+        "limitations": [
+          "Directory metadata is discovery, not a code/security audit; licenses absent from metadata remain unverified."
+        ],
+        "evidence_level": "discovery_only"
+      }
+    ]
+  },
+  {
+    "id": "SRC-d4e6cac47151",
+    "url": "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.13.0",
+    "title": "reachy_mini latest release metadata",
+    "aliases": [
+      "PLAT-026"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-026",
+        "title": "reachy_mini latest release metadata",
+        "url": "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.13.0",
+        "type": "official_release",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "API reports v1.13.0 published 2026-10-26T10:41:15Z; prerelease=False."
+        ],
+        "limitations": [
+          "Version discovery only; not installed, tested or approved for automatic update."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-9307c4aeff72",
+    "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/releases/tag/v1.1.1",
+    "title": "reachy_mini_conversation_app latest release metadata",
+    "aliases": [
+      "PLAT-027"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-027",
+        "title": "reachy_mini_conversation_app latest release metadata",
+        "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/releases/tag/v1.1.1",
+        "type": "official_release",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "API reports v1.1.1 published 2026-10-16T08:07:57Z; prerelease=False."
+        ],
+        "limitations": [
+          "Version discovery only; not installed, tested or approved for automatic update."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-ba7a22b4958a",
+    "url": "https://github.com/pollen-robotics/reachy-mini-desktop-app/releases/tag/v0.9.37",
+    "title": "reachy-mini-desktop-app latest release metadata",
+    "aliases": [
+      "PLAT-028"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-028",
+        "title": "reachy-mini-desktop-app latest release metadata",
+        "url": "https://github.com/pollen-robotics/reachy-mini-desktop-app/releases/tag/v0.9.37",
+        "type": "official_release",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "API reports v0.9.37 published 2026-10-27T13:24:02Z; prerelease=False."
+        ],
+        "limitations": [
+          "Version discovery only; not installed, tested or approved for automatic update."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-e69b6ff9559f",
+    "url": "https://github.com/pollen-robotics/reachy_mini_mobile_app/releases/tag/v0.11.4",
+    "title": "reachy_mini_mobile_app latest release metadata",
+    "aliases": [
+      "PLAT-029"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-029",
+        "title": "reachy_mini_mobile_app latest release metadata",
+        "url": "https://github.com/pollen-robotics/reachy_mini_mobile_app/releases/tag/v0.11.4",
+        "type": "official_release",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "API reports v0.11.4 published 2026-10-13T15:38:05Z; prerelease=False."
+        ],
+        "limitations": [
+          "Version discovery only; not installed, tested or approved for automatic update."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-8242859d5c6a",
+    "url": "https://github.com/pollen-robotics/reachy-mini-os/releases/tag/v0.3.2",
+    "title": "reachy-mini-os latest release metadata",
+    "aliases": [
+      "PLAT-030"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-030",
+        "title": "reachy-mini-os latest release metadata",
+        "url": "https://github.com/pollen-robotics/reachy-mini-os/releases/tag/v0.3.2",
+        "type": "official_release",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "API reports v0.3.2 published 2026-09-08T12:28:58Z; prerelease=False."
+        ],
+        "limitations": [
+          "Version discovery only; not installed, tested or approved for automatic update."
+        ],
+        "evidence_level": "documented"
+      }
+    ]
+  },
+  {
+    "id": "SRC-fe941d9a385e",
+    "url": "https://github.com/pollen-robotics/reachy_mini/pull/1533",
+    "title": "reachy_mini #1533: fix(daemon): clear stopped app on cleanup failure (#1523)",
+    "aliases": [
+      "PLAT-032"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-032",
+        "title": "reachy_mini #1533: fix(daemon): clear stopped app on cleanup failure (#1523)",
+        "url": "https://github.com/pollen-robotics/reachy_mini/pull/1533",
+        "type": "upstream_pull_request",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Open PR proposes clearing stopped-app state even when cleanup fails.",
+          "Observed state open, created 2026-11-02T10:47:42Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "proposed"
+      }
+    ]
+  },
+  {
+    "id": "SRC-1e8173b8ff78",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1508",
+    "title": "reachy_mini #1508: WebRTC audio: stop_recording() doesn't flush queued samples",
+    "aliases": [
+      "PLAT-033"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-033",
+        "title": "reachy_mini #1508: WebRTC audio: stop_recording() doesn't flush queued samples",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1508",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Reporter identifies stale queued WebRTC microphone samples across stop/start.",
+          "Observed state open, created 2026-10-26T19:11:24Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-3777840c0ca8",
+    "url": "https://github.com/pollen-robotics/reachy_mini/pull/1509",
+    "title": "reachy_mini #1509: fix(media): flush WebRTC audio appsink on stop/start recording",
+    "aliases": [
+      "PLAT-034"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-034",
+        "title": "reachy_mini #1509: fix(media): flush WebRTC audio appsink on stop/start recording",
+        "url": "https://github.com/pollen-robotics/reachy_mini/pull/1509",
+        "type": "upstream_pull_request",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Open PR proposes flushing recording queues on restart.",
+          "Observed state open, created 2026-10-26T23:44:25Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "proposed"
+      }
+    ]
+  },
+  {
+    "id": "SRC-6efd64879bd0",
+    "url": "https://github.com/pollen-robotics/reachy_mini/pull/1463",
+    "title": "reachy_mini #1463: fix(media): flush the whole playback path on barge-in",
+    "aliases": [
+      "PLAT-037"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-037",
+        "title": "reachy_mini #1463: fix(media): flush the whole playback path on barge-in",
+        "url": "https://github.com/pollen-robotics/reachy_mini/pull/1463",
+        "type": "upstream_pull_request",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Open PR proposes flushing the full local audio playback path.",
+          "Observed state open, created 2026-10-13T16:03:23Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "proposed"
+      }
+    ]
+  },
+  {
+    "id": "SRC-7e4c090d6058",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1516",
+    "title": "reachy_mini #1516: JSON-RPC errors quote the values of the request, and the relay logs the start of a refused frame",
+    "aliases": [
+      "PLAT-039"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-039",
+        "title": "reachy_mini #1516: JSON-RPC errors quote the values of the request, and the relay logs the start of a refused frame",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1516",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Reporter identifies input values in RPC validation errors and refused-frame logs.",
+          "Observed state open, created 2026-10-28T19:33:55Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-69ab481b082f",
+    "url": "https://github.com/pollen-robotics/reachy_mini/issues/1466",
+    "title": "reachy_mini #1466: [Reachy Mini Wireless] First-time onboarding does not match advertised setup experience",
+    "aliases": [
+      "PLAT-042"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-042",
+        "title": "reachy_mini #1466: [Reachy Mini Wireless] First-time onboarding does not match advertised setup experience",
+        "url": "https://github.com/pollen-robotics/reachy_mini/issues/1466",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Reporter describes Wireless first-onboarding mismatch with advertised flow.",
+          "Observed state open, created 2026-10-14T22:47:03Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-712592aec618",
+    "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/574",
+    "title": "reachy_mini_conversation_app #574: Realtime session intermittently stops detecting user speech (mic audio still reaches the app); only a new session fixes it",
+    "aliases": [
+      "PLAT-043"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-043",
+        "title": "reachy_mini_conversation_app #574: Realtime session intermittently stops detecting user speech (mic audio still reaches the app); only a new session fixes it",
+        "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/574",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Reporter observes speech detection stall despite microphone audio, recoverable by a new session.",
+          "Observed state open, created 2026-10-11T05:15:44Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-eb75bff7b7a4",
+    "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/559",
+    "title": "reachy_mini_conversation_app #559: Personality greeting plays while microphone is muted and repeats after unmuting",
+    "aliases": [
+      "PLAT-044"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-044",
+        "title": "reachy_mini_conversation_app #559: Personality greeting plays while microphone is muted and repeats after unmuting",
+        "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/559",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Reporter observes greeting while muted and repeated greeting after unmuting.",
+          "Observed state open, created 2026-09-23T13:58:29Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-5735404e4ab3",
+    "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/pull/514",
+    "title": "reachy_mini_conversation_app #514: Standby mode: \"go to sleep\" arms a local wake word instead of exiting",
+    "aliases": [
+      "PLAT-045"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-045",
+        "title": "reachy_mini_conversation_app #514: Standby mode: \"go to sleep\" arms a local wake word instead of exiting",
+        "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/pull/514",
+        "type": "upstream_pull_request",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Open PR proposes local wake-word standby and closing remote realtime while asleep; not shipped assurance.",
+          "Observed state open, created 2026-08-02T12:39:19Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "proposed"
+      }
+    ]
+  },
+  {
+    "id": "SRC-915ed81f335d",
+    "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/pull/515",
+    "title": "reachy_mini_conversation_app #515: Add optional background assistant tasks",
+    "aliases": [
+      "PLAT-046"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-046",
+        "title": "reachy_mini_conversation_app #515: Add optional background assistant tasks",
+        "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/pull/515",
+        "type": "upstream_pull_request",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Open PR proposes optional durable background assistant tasks; not shipped assurance.",
+          "Observed state open, created 2026-08-03T12:35:00Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "proposed"
+      }
+    ]
+  },
+  {
+    "id": "SRC-fb8d432efe00",
+    "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/434",
+    "title": "reachy_mini_conversation_app #434: Support configuring custom MCP servers",
+    "aliases": [
+      "PLAT-047"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-047",
+        "title": "reachy_mini_conversation_app #434: Support configuring custom MCP servers",
+        "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/434",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Issue requests arbitrary custom MCP endpoints beyond currently documented HF Gradio Space tools.",
+          "Observed state open, created 2026-06-25T11:38:08Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-52cdfb19896d",
+    "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/542",
+    "title": "reachy_mini_conversation_app #542: Expose the accepted user turn to local tools",
+    "aliases": [
+      "PLAT-048"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-048",
+        "title": "reachy_mini_conversation_app #542: Expose the accepted user turn to local tools",
+        "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/542",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Proposal exposes an accepted user-turn lease to local tools, invalidated on new speech or reconnect.",
+          "Observed state open, created 2026-08-29T13:20:42Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-68354e2f17cd",
+    "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/315",
+    "title": "reachy_mini_conversation_app #315: Require fresh camera capture for every visual question",
+    "aliases": [
+      "PLAT-049"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-049",
+        "title": "reachy_mini_conversation_app #315: Require fresh camera capture for every visual question",
+        "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/315",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Issue requests fresh image capture for each new visual question.",
+          "Observed state open, created 2026-04-22T16:30:31Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  },
+  {
+    "id": "SRC-1799618b88fa",
+    "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/541",
+    "title": "reachy_mini_conversation_app #541: App crashes across reboot",
+    "aliases": [
+      "PLAT-050"
+    ],
+    "reviews": [
+      {
+        "file": "research/platform/sources.json",
+        "id": "PLAT-050",
+        "title": "reachy_mini_conversation_app #541: App crashes across reboot",
+        "url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/541",
+        "type": "upstream_issue",
+        "accessed_at": "2026-11-02T22:05:40.069073+00:00",
+        "claims": [
+          "Reporter describes missing SDK JSON-RPC module after reboot, a version/environment mismatch lead.",
+          "Observed state open, created 2026-08-21T04:40:13Z; merged_at=None."
+        ],
+        "limitations": [
+          "Author report/proposal; this research did not reproduce it on owned hardware. Open PR is not a released fix."
+        ],
+        "evidence_level": "reported"
+      }
+    ]
+  }
+]

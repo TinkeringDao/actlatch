@@ -1,0 +1,119 @@
+{
+  "checked_at": "2026-11-03T21:59:31.044957+00:00",
+  "scope": "Selected consequential upstream claims, not every source or hardware behavior",
+  "robot_tests": false,
+  "results": [
+    {
+      "kind": "latest_release",
+      "url": "https://api.github.com/repos/pollen-robotics/reachy_mini/releases/latest",
+      "observed": {
+        "tag_name": "v1.13.0",
+        "published_at": "2026-10-26T10:41:15Z",
+        "html_url": "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.13.0"
+      }
+    },
+    {
+      "kind": "latest_release",
+      "url": "https://api.github.com/repos/pollen-robotics/reachy_mini_conversation_app/releases/latest",
+      "observed": {
+        "tag_name": "v1.1.1",
+        "published_at": "2026-10-16T08:07:57Z",
+        "html_url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/releases/tag/v1.1.1"
+      }
+    },
+    {
+      "kind": "pulls",
+      "url": "https://api.github.com/repos/pollen-robotics/reachy_mini_conversation_app/pulls/514",
+      "observed": {
+        "title": "Standby mode: \"go to sleep\" arms a local wake word instead of exiting",
+        "state": "open",
+        "merged_at": null,
+        "updated_at": "2026-08-05T14:37:33Z",
+        "html_url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/pull/514"
+      }
+    },
+    {
+      "kind": "pulls",
+      "url": "https://api.github.com/repos/pollen-robotics/reachy_mini_conversation_app/pulls/515",
+      "observed": {
+        "title": "Add optional background assistant tasks",
+        "state": "open",
+        "merged_at": null,
+        "updated_at": "2026-08-05T14:45:59Z",
+        "html_url": "https://github.com/pollen-robotics/reachy_mini_conversation_app/pull/515"
+      }
+    },
+    {
+      "kind": "issues",
+      "url": "https://api.github.com/repos/pollen-robotics/reachy_mini/issues/1494",
+      "observed": {
+        "title": "SDK command websocket: keepalive timeout isn't configurable and there is no reconnect",
+        "state": "open",
+        "merged_at": null,
+        "updated_at": "2026-10-21T19:06:50Z",
+        "html_url": "https://github.com/pollen-robotics/reachy_mini/issues/1494"
+      }
+    },
+    {
+      "kind": "issues",
+      "url": "https://api.github.com/repos/pollen-robotics/reachy_mini/issues/1462",
+      "observed": {
+        "title": "Barge-in on the local audio backend lets queued speech play after clear_player()",
+        "state": "open",
+        "merged_at": null,
+        "updated_at": "2026-10-13T16:02:59Z",
+        "html_url": "https://github.com/pollen-robotics/reachy_mini/issues/1462"
+      }
+    },
+    {
+      "kind": "issues",
+      "url": "https://api.github.com/repos/pollen-robotics/reachy_mini/issues/1523",
+      "observed": {
+        "title": "AppManager.stop_current_app leaves the app stuck in \"stopping\" when the post-stop pose check raises",
+        "state": "open",
+        "merged_at": null,
+        "updated_at": "2026-10-29T18:02:04Z",
+        "html_url": "https://github.com/pollen-robotics/reachy_mini/issues/1523"
+      }
+    },
+    {
+      "kind": "pulls",
+      "url": "https://api.github.com/repos/pollen-robotics/reachy_mini/pulls/1533",
+      "observed": {
+        "title": "fix(daemon): clear stopped app on cleanup failure (#1523)",
+        "state": "open",
+        "merged_at": null,
+        "updated_at": "2026-11-03T15:39:57Z",
+        "html_url": "https://github.com/pollen-robotics/reachy_mini/pull/1533"
+      }
+    },
+    {
+      "kind": "pinned_sdk_source",
+      "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini/v1.13.0/src/reachy_mini/reachy_mini.py",
+      "sha256": "260057aed072f8d5901d2de7aece96ae86c27148e77f5fc58d3f2ca135d4f7a9",
+      "observed": {
+        "automatic_body_yaw_default": true,
+        "sets_automatic_body_yaw": true,
+        "configures_media": true
+      }
+    },
+    {
+      "kind": "pinned_documentation",
+      "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini/v1.13.0/docs/source/SDK/telemetry.md",
+      "sha256": "c65e3935769da5bbd81dca7a96b4b5b0d1fea4b84ad011d7116edb67312700f5",
+      "observed": {
+        "telemetry_on_by_default": true,
+        "opt_out_documented": true
+      }
+    },
+    {
+      "kind": "pinned_documentation",
+      "url": "https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/v1.1.1/README.md",
+      "sha256": "0e7c98456741ae341d24b44ec5aaa13c04e1a53048b4bf95c1267ac6e3b92e55",
+      "observed": {
+        "hosted_default_documented": true,
+        "local_backend_documented": true
+      }
+    }
+  ]
+}

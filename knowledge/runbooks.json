@@ -1,0 +1,924 @@
+[
+  {
+    "id": "PLAT-R001",
+    "symptom": "Wireless robot not discovered or .local fails",
+    "diagnostics": [
+      "Resolve the recorded hostname and compare router DHCP lease/known robot IP.",
+      "Read /api/daemon/status on the pinned robot; distinguish DNS, TCP and daemon readiness."
+    ],
+    "probable_causes": [
+      "mDNS unavailable across network boundary",
+      "Changed DHCP address",
+      "Robot not fully booted"
+    ],
+    "safe_actions": [
+      "Retry the known local IP with capped backoff.",
+      "Keep the robot asleep; do not scan arbitrary networks or change Wi-Fi automatically."
+    ],
+    "stop_conditions": [
+      "Unknown identity, repeated timeout or physical power fault: request adult inspection."
+    ],
+    "evidence_urls": [
+      "https://huggingface.co/docs/reachy_mini/platforms/reachy_mini/get_started",
+      "https://huggingface.co/docs/reachy_mini/integrations/home_assistant"
+    ],
+    "automation_tier": 1,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R002",
+    "symptom": "Robot reports busy or app already running",
+    "diagnostics": [
+      "Read current app/robot-app-lock status and identify local or remote owner."
+    ],
+    "probable_causes": [
+      "Another parent UI or app owns the single slot",
+      "Abandoned session lease"
+    ],
+    "safe_actions": [
+      "Close only the session owned by this controller and retry once.",
+      "Preserve another legitimate owner; report its state."
+    ],
+    "stop_conditions": [
+      "Ownership is unknown or a different controller remains active."
+    ],
+    "evidence_urls": [
+      "https://huggingface.co/docs/reachy_mini/SDK/apps",
+      "https://huggingface.co/docs/reachy_mini/SDK/cloud-backend-consumer"
+    ],
+    "automation_tier": 1,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R003",
+    "symptom": "App stuck in STOPPING after its process exited",
+    "diagnostics": [
+      "Compare app status, process exit and redacted post-stop logs; check daemon version."
+    ],
+    "probable_causes": [
+      "Reported post-stop cleanup failure on Wireless 1.13.0"
+    ],
+    "safe_actions": [
+      "Disable further start/stop loops and preserve incident metadata.",
+      "Offer an adult maintenance restart after posture/ownership checks; do not apply open PR automatically."
+    ],
+    "stop_conditions": [
+      "Child near moving parts, unresolved motor error or repeat after one supervised recovery."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1523",
+      "https://github.com/pollen-robotics/reachy_mini/pull/1533"
+    ],
+    "automation_tier": 0,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R004",
+    "symptom": "New voice session receives an old utterance",
+    "diagnostics": [
+      "Tag audio by session/epoch and compare the first microphone timestamps after recording restart."
+    ],
+    "probable_causes": [
+      "Reported queued WebRTC samples survive stop/start"
+    ],
+    "safe_actions": [
+      "Discard pre-session audio at the controller boundary.",
+      "Invalidate old tool leases and restart only the owned voice session once."
+    ],
+    "stop_conditions": [
+      "Any stale utterance could trigger a consequential action; block action until a fresh direct turn is confirmed."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1508",
+      "https://github.com/pollen-robotics/reachy_mini/pull/1509"
+    ],
+    "automation_tier": 1,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R005",
+    "symptom": "Speech continues after the child interrupts",
+    "diagnostics": [
+      "Measure actual speaker output after interruption separately from provider cancel acknowledgement."
+    ],
+    "probable_causes": [
+      "Playback samples remain in SDK/transport queues",
+      "Older response is still being forwarded"
+    ],
+    "safe_actions": [
+      "Revoke the response epoch and discard old output at every adapter queue.",
+      "Remain muted if immediate stop cannot be established."
+    ],
+    "stop_conditions": [
+      "Repeated audible stop failure or uncontrolled motion: end child session and notify parent."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1462",
+      "https://github.com/pollen-robotics/reachy_mini/pull/1463"
+    ],
+    "automation_tier": 1,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R006",
+    "symptom": "Command WebSocket disconnects and no commands work",
+    "diagnostics": [
+      "Check daemon health and connection-close reason; preserve robot/session identity."
+    ],
+    "probable_causes": [
+      "Reported client reconnect/keepalive limitation",
+      "Network interruption"
+    ],
+    "safe_actions": [
+      "Rebuild only the failed owned transport with bounded backoff, preserving generation ownership, motion policy and mute/camera state. Do not instantiate a generic ReachyMini client as an automatic read-only reconnect.",
+      "Never replay queued physical actions after reconnect.",
+      "Coordinator review: use a narrow transport rebuild only. SDK v1.13.0 ReachyMini construction sets automatic body yaw and initializes media; a generic constructor is not a read-only recovery and needs verified motion/mute/camera settings first."
+    ],
+    "stop_conditions": [
+      "Identity mismatch, another owner, motor fault or retry budget exhausted."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1494",
+      "https://raw.githubusercontent.com/pollen-robotics/reachy_mini/main/src/reachy_mini/reachy_mini.py",
+      "https://raw.githubusercontent.com/pollen-robotics/reachy_mini/v1.13.0/src/reachy_mini/reachy_mini.py"
+    ],
+    "automation_tier": 1,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "review_note": "Constructor side-effect gate added after independent review; still untested on owned robot.",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R007",
+    "symptom": "App hears microphone but stops accepting turns",
+    "diagnostics": [
+      "Compare audio-frame arrival, VAD state and backend response events using redacted counters."
+    ],
+    "probable_causes": [
+      "Reported backend/session speech-detection stall"
+    ],
+    "safe_actions": [
+      "Cancel active response and create one fresh local voice session.",
+      "Explain a short pause; retain activity state without re-sending the old utterance."
+    ],
+    "stop_conditions": [
+      "Repeated stalls or backend not demonstrably local; fail closed instead of hosted fallback."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/574"
+    ],
+    "automation_tier": 1,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R008",
+    "symptom": "Robot greets while muted or repeats greeting after unmute",
+    "diagnostics": [
+      "Check effective mute and output-queue state before a new greeting."
+    ],
+    "probable_causes": [
+      "Reported greeting/mute lifecycle mismatch"
+    ],
+    "safe_actions": [
+      "Gate every playback producer on authoritative local mute state.",
+      "Drop greetings created in a muted/closed epoch."
+    ],
+    "stop_conditions": [
+      "Mute does not suppress output or capture egress; end session for investigation."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/559"
+    ],
+    "automation_tier": 1,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R009",
+    "symptom": "Playback drops the beginning of words after idle",
+    "diagnostics": [
+      "Compare submitted versus audibly played first samples on the exact Wireless media path."
+    ],
+    "probable_causes": [
+      "Reported idle-to-playback audio discontinuity"
+    ],
+    "safe_actions": [
+      "Record timing/counter evidence without child raw audio by default.",
+      "Use parent-reviewed stable audio settings or cached prompts while investigating."
+    ],
+    "stop_conditions": [
+      "Do not raise volume or change firmware blindly to mask missing phonemes."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1459"
+    ],
+    "automation_tier": 0,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R010",
+    "symptom": "No microphone samples or all-zero capture",
+    "diagnostics": [
+      "Check daemon media state and presence of the robot audio device before testing backend models."
+    ],
+    "probable_causes": [
+      "Muted/misrouted capture",
+      "Physical mic cable installation or damage"
+    ],
+    "safe_actions": [
+      "Use non-actuating local media diagnostics and report silence as a hardware/audio uncertainty."
+    ],
+    "stop_conditions": [
+      "Suspected cable damage requires powered-off adult inspection; no repeated restart loop."
+    ],
+    "evidence_urls": [
+      "https://huggingface.co/docs/reachy_mini/troubleshooting",
+      "https://huggingface.co/docs/reachy_mini/platforms/reachy_mini/media_advanced_controls"
+    ],
+    "automation_tier": 0,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R011",
+    "symptom": "Robot hears its own speech or falsely interrupts",
+    "diagnostics": [
+      "Verify robot speaker/reference path and baseline XMOS AEC configuration."
+    ],
+    "probable_causes": [
+      "Incorrect audio routing",
+      "Speaker volume/noise conditions",
+      "Competing or changed DSP"
+    ],
+    "safe_actions": [
+      "Restore a recorded known-good software audio profile when available.",
+      "Use conservative volume and pause interaction if echo persists."
+    ],
+    "stop_conditions": [
+      "No validated baseline or hardware wiring issue; do not retune firmware/AEC parameters autonomously."
+    ],
+    "evidence_urls": [
+      "https://huggingface.co/docs/reachy_mini/platforms/reachy_mini/media_advanced_controls"
+    ],
+    "automation_tier": 0,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R012",
+    "symptom": "Motor LED fault, heat, overload, unusual grinding or cable strain",
+    "diagnostics": [
+      "Read non-moving fault state and identify whether mechanical inspection is needed."
+    ],
+    "probable_causes": [
+      "Physical obstruction, wiring or motor configuration fault"
+    ],
+    "safe_actions": [
+      "Latch a motor fault; stop generating gestures and request adult attention.",
+      "Use manufacturer testbench only in adult maintenance with correct daemon-backend ownership."
+    ],
+    "stop_conditions": [
+      "Do not automatically re-enable torque, alter PID, reflash motors or power-cycle repeatedly."
+    ],
+    "evidence_urls": [
+      "https://huggingface.co/docs/reachy_mini/troubleshooting/motors_diagnosis"
+    ],
+    "automation_tier": 0,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R013",
+    "symptom": "App works until reboot then imports fail",
+    "diagnostics": [
+      "Record app/SDK/OS versions and package environment; check missing module/dependency conflict."
+    ],
+    "probable_causes": [
+      "Shared app-venv drift",
+      "Version mismatch or dependency pin conflict"
+    ],
+    "safe_actions": [
+      "Keep a version manifest and restore a parent-reviewed known-good app environment during maintenance."
+    ],
+    "stop_conditions": [
+      "No backup/manifest or reset would remove apps; do not full-reset or pip-upgrade all automatically."
+    ],
+    "evidence_urls": [
+      "https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/main/pyproject.toml",
+      "https://github.com/pollen-robotics/reachy_mini/issues/1493",
+      "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/541"
+    ],
+    "automation_tier": 0,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R014",
+    "symptom": "Simulation audio process segfaults on first speech",
+    "diagnostics": [
+      "Identify OS, GStreamer build, output format and whether failure occurs in simulation only."
+    ],
+    "probable_causes": [
+      "Reported macOS laptop audiomixer format-conversion crash"
+    ],
+    "safe_actions": [
+      "Isolate simulation pipeline and preserve versions; keep robot configuration unchanged."
+    ],
+    "stop_conditions": [
+      "No matching environment; do not generalize the simulator report to the physical robot or apply open patches blindly."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1525",
+      "https://huggingface.co/docs/reachy_mini/platforms/simulation/get_started"
+    ],
+    "automation_tier": 0,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R015",
+    "symptom": "Robot refers to an old drawing or image",
+    "diagnostics": [
+      "Check frame capture time/id and current utterance epoch."
+    ],
+    "probable_causes": [
+      "Camera frame reused from earlier question",
+      "Late image/response after interruption"
+    ],
+    "safe_actions": [
+      "Capture one new permitted frame for a new visual task, or say no current image is available.",
+      "Reject expired frames and discard late results."
+    ],
+    "stop_conditions": [
+      "Camera not authorized or image would leave the home; decline capture/transfer."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini_conversation_app/issues/315"
+    ],
+    "automation_tier": 1,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R016",
+    "symptom": "Private mode unexpectedly contacts external services",
+    "diagnostics": [
+      "Check effective app settings, backend URL, telemetry state and network egress without content capture."
+    ],
+    "probable_causes": [
+      "Hosted default restored",
+      "Saved settings override environment",
+      "Default asset download or telemetry"
+    ],
+    "safe_actions": [
+      "End the child session and hold audio/video locally.",
+      "Pre-cache public assets and verify local URLs/egress policy before resuming."
+    ],
+    "stop_conditions": [
+      "Do not silently switch to a hosted provider to restore service."
+    ],
+    "evidence_urls": [
+      "https://raw.githubusercontent.com/pollen-robotics/reachy_mini_conversation_app/main/README.md",
+      "https://huggingface.co/docs/reachy_mini/SDK/telemetry",
+      "https://github.com/huggingface/speech-to-speech"
+    ],
+    "automation_tier": 0,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R017",
+    "symptom": "Wake word is unavailable after go-to-sleep",
+    "diagnostics": [
+      "Check whether exact release includes a tested local standby controller."
+    ],
+    "probable_causes": [
+      "Assuming open standby PR #514 is shipped",
+      "Conversation app exited and no local wake process exists"
+    ],
+    "safe_actions": [
+      "Use a deliberate parent/local start control until a local wake controller is implemented and validated."
+    ],
+    "stop_conditions": [
+      "Standby sends microphone data externally or wake requires an unknown credential."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini_conversation_app/pull/514"
+    ],
+    "automation_tier": 0,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "PLAT-R018",
+    "symptom": "SDK attaches to simulator or wrong physical robot",
+    "diagnostics": [
+      "Read daemon identity and explicit connection-mode configuration before media/motion activation."
+    ],
+    "probable_causes": [
+      "Auto mode prefers a localhost daemon",
+      "Unpinned hostname or changed lease"
+    ],
+    "safe_actions": [
+      "Pin the intended LAN host with network mode and verify identity before permitting commands."
+    ],
+    "stop_conditions": [
+      "Identity mismatch: no motion or camera/audio activation."
+    ],
+    "evidence_urls": [
+      "https://raw.githubusercontent.com/pollen-robotics/reachy_mini/main/src/reachy_mini/reachy_mini.py"
+    ],
+    "automation_tier": 0,
+    "status": "source-informed proposed runbook; not exercised on owned robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T01",
+    "symptom": "Audio continues but movement commands all fail",
+    "hardware_scope": "Wireless/network SDK",
+    "diagnostics": [
+      "Compare daemon reachability, media frames and command-WS connection separately; preserve timeout/error and host pressure counters."
+    ],
+    "probable_causes": [
+      "Command WebSocket died during host stall; media is a separate connection."
+    ],
+    "safe_actions": [
+      "Invalidate stale command client; rate-limit reconstruction after confirming no conflicting motion owner. Restore only harmless state; do not blindly enable torque."
+    ],
+    "stop_conditions": [
+      "Repeated loss within retry budget; unsafe posture or unknown app owner."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1494"
+    ],
+    "source_ids": [
+      "COMM-S24"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T02",
+    "symptom": "STT hallucinates/repeats words when robot animates",
+    "hardware_scope": "Reported Wireless/Pi5 environment; stock applicability unverified",
+    "diagnostics": [
+      "Compare short local raw captures with motion idle versus normal permitted motion; no child recording retained by default."
+    ],
+    "probable_causes": [
+      "Motor noise or adaptive audio processing; report hypothesis is not universal."
+    ],
+    "safe_actions": [
+      "Use a prevalidated quiet listening profile without idle/wobble animation; preserve local diagnostic metadata."
+    ],
+    "stop_conditions": [
+      "Persistent corrupt capture after quiet interval; do not change DSP firmware or motor gains automatically."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1334"
+    ],
+    "source_ids": [
+      "COMM-S21"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T03",
+    "symptom": "Short phonemes disappear from otherwise clear speech",
+    "hardware_scope": "Wireless WebRTC",
+    "diagnostics": [
+      "Compare SDK/daemon versions; replay an adult-approved known-clear synthetic phrase with actual output capture."
+    ],
+    "probable_causes": [
+      "Version mismatch, chunk scheduling or media buffering; idle sensitivity unproven."
+    ],
+    "safe_actions": [
+      "Use matched pinned versions and a pretested pacing configuration; reconnect media at most within bounded retry policy."
+    ],
+    "stop_conditions": [
+      "Do not claim fixed from a handful of clear replays; persistent clipping blocks pronunciation/letter teaching."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1459"
+    ],
+    "source_ids": [
+      "COMM-S23"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T04",
+    "symptom": "Interrupted speech resumes in a burst",
+    "hardware_scope": "Wireless local audio",
+    "diagnostics": [
+      "Measure physical stop latency; track generation ID and queued-output count."
+    ],
+    "probable_causes": [
+      "Downstream mixer/sink audio can survive clear_player."
+    ],
+    "safe_actions": [
+      "Cancel generation, discard late chunks and use validated full-pipeline cancellation path."
+    ],
+    "stop_conditions": [
+      "Stop child session if reliable stop cannot be demonstrated; do not treat callback ack as acoustic silence."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1462"
+    ],
+    "source_ids": [
+      "COMM-S22"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T05",
+    "symptom": "App exited but status remains stopping; new app refused",
+    "hardware_scope": "Wireless daemon 1.13.0 report",
+    "diagnostics": [
+      "Check actual process exit, app manager status and app lock; retain post-stop pose errors."
+    ],
+    "probable_causes": [
+      "Exception before clearing app-manager state."
+    ],
+    "safe_actions": [
+      "Freeze restart loop; capture evidence. A single owned daemon restart is a maintenance recovery only after safe/idle posture and no other app owner."
+    ],
+    "stop_conditions": [
+      "Unknown lock owner, motion fault, repeated stale state; do not repeatedly kill processes."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1523"
+    ],
+    "source_ids": [
+      "COMM-S25"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T06",
+    "symptom": "Remote laptop logs no Reachy Audio USB device",
+    "hardware_scope": "Wireless remote client, historical versions",
+    "diagnostics": [
+      "Identify where audio-config code executes; inspect robot-side enumeration rather than laptop USB."
+    ],
+    "probable_causes": [
+      "Old API attempted direct USB configuration on remote client."
+    ],
+    "safe_actions": [
+      "Use a tested remote-capable API or perform approved configuration on the robot-side service; compare matched versions."
+    ],
+    "stop_conditions": [
+      "Do not cable-reseat or flash because a remote laptop lacks the audio board."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1080"
+    ],
+    "source_ids": [
+      "COMM-S26"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T07",
+    "symptom": "Joint stops following target while daemon appears healthy",
+    "hardware_scope": "Wireless battery report",
+    "diagnostics": [
+      "Compare target and present positions using low-rate status; inspect available motor error state and power mode."
+    ],
+    "probable_causes": [
+      "Reported servo hardware error latch; physical obstruction or power issue also possible."
+    ],
+    "safe_actions": [
+      "Stop new motion and alert owner with retained diagnostics."
+    ],
+    "stop_conditions": [
+      "Never auto-change voltage limits, clear hardware faults, or repeatedly re-enable torque near child."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1402"
+    ],
+    "source_ids": [
+      "COMM-S27"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T08",
+    "symptom": "Body oscillates after motion has ended",
+    "hardware_scope": "Wireless 1.12.0 report",
+    "diagnostics": [
+      "Confirm no competing target producer; record present-target residual and motion owner."
+    ],
+    "probable_causes": [
+      "Reported yaw servo limit cycle, competing controllers, or mechanical issue."
+    ],
+    "safe_actions": [
+      "Enter prevalidated stationary safe mode and require owner inspection."
+    ],
+    "stop_conditions": [
+      "Do not copy online PID-gain workaround automatically; unknown mechanical load blocks recovery."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1479"
+    ],
+    "source_ids": [
+      "COMM-S28"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T09",
+    "symptom": "Head settles/drop occurs after sleep transition",
+    "hardware_scope": "Wireless 1.12.0 report",
+    "diagnostics": [
+      "Observe from a safe distance; record sleep mode transition without repeated stress tests."
+    ],
+    "probable_causes": [
+      "Reported sleep-pose/torque-release gap."
+    ],
+    "safe_actions": [
+      "Stop repeated wake/sleep cycling; use owner-reviewed safe parking procedure."
+    ],
+    "stop_conditions": [
+      "Any collision, obstruction, unexpected drop or unusual noise; do not auto-modify geometry."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1478"
+    ],
+    "source_ids": [
+      "COMM-S29"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T10",
+    "symptom": "Dashboard cannot resolve app dependencies",
+    "hardware_scope": "SDK/Pipecat reported ONNX pin conflict",
+    "diagnostics": [
+      "Save exact package versions and resolver conflict; compare clean staged lockfile with dashboard installer behavior."
+    ],
+    "probable_causes": [
+      "Incompatible onnxruntime constraints; project-local overrides ignored by installer."
+    ],
+    "safe_actions": [
+      "Keep last known-good runtime; test new dependency set in isolated environment and promote only after validation."
+    ],
+    "stop_conditions": [
+      "Never mass-upgrade shared environment or delete venv as automatic repair."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1493"
+    ],
+    "source_ids": [
+      "COMM-S30"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T11",
+    "symptom": "One target-pose state query returns HTTP 500 after startup",
+    "hardware_scope": "Wireless 1.13.0 reported optional-field bug",
+    "diagnostics": [
+      "Use basic daemon readiness and present-state endpoints; distinguish optional unset target from service failure."
+    ],
+    "probable_causes": [
+      "target_head_pose not yet initialized."
+    ],
+    "safe_actions": [
+      "Make monitoring tolerate absent optional target data and degrade that metric only."
+    ],
+    "stop_conditions": [
+      "Do not wake/move robot or restart healthy daemon just to fill a missing target field."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1527"
+    ],
+    "source_ids": [
+      "COMM-S31"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T12",
+    "symptom": "Desktop simulation crashes on first playback",
+    "hardware_scope": "Reported macOS/GStreamer simulation only",
+    "diagnostics": [
+      "Capture backend/version and negotiated audio caps; compare real robot and simulator separately."
+    ],
+    "probable_causes": [
+      "Reported mixer conversion path can segfault for laptop-speaker format."
+    ],
+    "safe_actions": [
+      "Keep simulator bug separate; evaluate a pinned reviewed upstream fix in staging."
+    ],
+    "stop_conditions": [
+      "Repeated native crash or unsafe motion state; no blind dependency loop."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1525"
+    ],
+    "source_ids": [
+      "COMM-S32"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T13",
+    "symptom": "Wireless absent from LAN and SSH/daemon both fail",
+    "hardware_scope": "Wireless historical report",
+    "diagnostics": [
+      "Check known DHCP lease/ARP, power indication and expected Wi-Fi path; distinguish robot disappearance from mDNS failure."
+    ],
+    "probable_causes": [
+      "Power/boot/network fault; LED alone is insufficient evidence."
+    ],
+    "safe_actions": [
+      "Stop connection storm, preserve last-seen data, try known direct IP once; request owner hardware/power check if fully absent."
+    ],
+    "stop_conditions": [
+      "No automatic router restart, repeated power cycling or factory Wi-Fi reset."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1115",
+      "https://github.com/pollen-robotics/reachy_mini/blob/main/docs/source/troubleshooting.md"
+    ],
+    "source_ids": [
+      "COMM-S33",
+      "COMM-S47"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T14",
+    "symptom": "HF account authenticated but remote relay offline",
+    "hardware_scope": "Wireless remote relay 1.11.0 report",
+    "diagnostics": [
+      "Compare auth status and relay status with direct local daemon health."
+    ],
+    "probable_causes": [
+      "Relay initialization failure after update/authentication."
+    ],
+    "safe_actions": [
+      "Keep private local operation available; log remote-only degradation."
+    ],
+    "stop_conditions": [
+      "No re-login/token reset or cloud fallback from child session; reboot is reviewed maintenance, not first response."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1465"
+    ],
+    "source_ids": [
+      "COMM-S34"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T15",
+    "symptom": "Import error mentions reachy_mini.io.jsonrpc",
+    "hardware_scope": "Historical conversation app package mismatch",
+    "diagnostics": [
+      "Record app/daemon/client versions and failing import in correct app venv."
+    ],
+    "probable_causes": [
+      "Moved SDK API or incompatible app environment."
+    ],
+    "safe_actions": [
+      "Restore known-good matched set; stage upgrade in separate environment."
+    ],
+    "stop_conditions": [
+      "Full environment reset deletes installed state/apps; manual owner maintenance only."
+    ],
+    "evidence_urls": [
+      "https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app/discussions/19"
+    ],
+    "source_ids": [
+      "COMM-S38"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T16",
+    "symptom": "HA satellite wakes but stays listening indefinitely",
+    "hardware_scope": "Reported Wireless HA satellite combination",
+    "diagnostics": [
+      "Distinguish wake detector, capture frames, speech-detected state and turn-end event; check motion owner separately."
+    ],
+    "probable_causes": [
+      "Reported streaming/deprecated-API or app-latch issue; causes not confirmed."
+    ],
+    "safe_actions": [
+      "End the stuck session using local timeout; return quiet idle with a simple retry/parent cue."
+    ],
+    "stop_conditions": [
+      "Do not repeatedly restart HA or treat changed VAD threshold as proven cure."
+    ],
+    "evidence_urls": [
+      "https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app/discussions/20"
+    ],
+    "source_ids": [
+      "COMM-S37"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T17",
+    "symptom": "USB audio enumerates but raw capture remains silent",
+    "hardware_scope": "Physical microphone report",
+    "diagnostics": [
+      "Compare device-present, capture-frame count and RMS without storing conversations; owner can make an explicit local synthetic test recording."
+    ],
+    "probable_causes": [
+      "Cable orientation/damage, audio firmware or hardware fault; no single cause established."
+    ],
+    "safe_actions": [
+      "Mute input-dependent functions, retain bounded status and request owner/vendor inspection."
+    ],
+    "stop_conditions": [
+      "No autonomous case opening, cable manipulation or audio-board flashing."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1425"
+    ],
+    "source_ids": [
+      "COMM-S35"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T18",
+    "symptom": "Audio USB child absent while hub/camera remain",
+    "hardware_scope": "Lite/Linux only; not purchased Wireless",
+    "diagnostics": [
+      "Inspect sibling device enumeration and kernel disconnect event."
+    ],
+    "probable_causes": [
+      "Reported selective audio-child disappearance."
+    ],
+    "safe_actions": [
+      "Record distinction; owner may reconnect Lite USB using vendor procedure."
+    ],
+    "stop_conditions": [
+      "Do not apply Lite USB reconnection instructions to Wireless laptop connection."
+    ],
+    "evidence_urls": [
+      "https://github.com/pollen-robotics/reachy_mini/issues/1322"
+    ],
+    "source_ids": [
+      "COMM-S36"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  },
+  {
+    "id": "COMM-T19",
+    "symptom": "German turn is mistranscribed or synthesized in another language",
+    "hardware_scope": "Local voice component selection",
+    "diagnostics": [
+      "Record model IDs, backend-specific language config and finalized-turn IDs; test adult synthetic German first, then parent-supervised child samples."
+    ],
+    "probable_causes": [
+      "Language setting applied to wrong stage, wrong model, duplicate partial/final turns or uncertain child speech."
+    ],
+    "safe_actions": [
+      "Pin de where supported, select an explicitly German-capable TTS, deduplicate final turns; ask for repeat rather than grade uncertainty."
+    ],
+    "stop_conditions": [
+      "No cloud fallback, broad audio upload or false learning score to hide ASR failure."
+    ],
+    "evidence_urls": [
+      "https://github.com/huggingface/speech-to-speech",
+      "https://huggingface.co/rhasspy/piper-voices/tree/main/de/de_DE",
+      "https://github.com/segutwein/jetson-assistant",
+      "https://www.reddit.com/r/LocalLLaMA/comments/1tq4x48/reachy_mini_goes_fully_local/"
+    ],
+    "source_ids": [
+      "COMM-S13",
+      "COMM-S16",
+      "COMM-S18",
+      "COMM-S41"
+    ],
+    "verification": "Candidate runbook derived from evidence; not executed on purchased robot",
+    "execution_authority": "Reference only: no commands or repair actions are enabled by this file."
+  }
+]

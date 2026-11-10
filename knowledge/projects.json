@@ -1,0 +1,271 @@
+[
+  {
+    "id": "COMM-P01",
+    "name": "Hugging Face speech-to-speech",
+    "url": "https://github.com/huggingface/speech-to-speech",
+    "source_ids": [
+      "COMM-S13"
+    ],
+    "category": "local voice engine",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Current repository; pushed 2026-11-02; Apache 2.0",
+    "fit_for_private_german_wireless": "Strong candidate to evaluate against a minimal cascade.",
+    "limitations": "Use explicit local endpoints, German settings, compatible model licenses and measured CPU/GPU requirements. Not yet integrated with dedicated child service.",
+    "license_verified": "Apache-2.0",
+    "last_push_reported_by_api": "2026-11-02T21:41:11Z",
+    "fork_of": null,
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "COMM-P02",
+    "name": "OHF Piper + German voice",
+    "url": "https://github.com/OHF-Voice/piper1-gpl",
+    "source_ids": [
+      "COMM-S15"
+    ],
+    "category": "local TTS",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Current repository; pushed 2026-11-02",
+    "fit_for_private_german_wireless": "Low-footprint German voice candidate; evaluate chosen de_DE model.",
+    "limitations": "Engine GPL3; voice license separate; endpoint adapter required.",
+    "license_verified": "GPL-3.0",
+    "last_push_reported_by_api": "2026-11-02T19:45:04Z",
+    "fork_of": null,
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "COMM-P04",
+    "name": "OpenVoiceStream",
+    "url": "https://github.com/Seeed-Solution/openvoicestream",
+    "source_ids": [
+      "COMM-S17"
+    ],
+    "category": "local voice service",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Active renamed repository; pushed 2026-10-27",
+    "fit_for_private_german_wireless": "Alternative local service architecture to evaluate.",
+    "limitations": "Old jetson-local-voice URL redirects; target Jetson/CUDA and chosen German models need validation.",
+    "license_verified": "MIT",
+    "last_push_reported_by_api": "2026-10-27T03:29:54Z",
+    "fork_of": null,
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "COMM-P10",
+    "name": "agentculture Reachy MCP",
+    "url": "https://github.com/agentculture/reachy-mini-mcp",
+    "source_ids": [
+      "COMM-S06"
+    ],
+    "category": "robot tool adapter",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Available; last push July 2026",
+    "fit_for_private_german_wireless": "Candidate source for narrow robot capability wrapper.",
+    "limitations": "Do not expose unrestricted operate_robot/power/motion to child or adopt roadmap growth/fine-tune features unreviewed.",
+    "license_verified": "MIT",
+    "last_push_reported_by_api": "2026-07-15T14:06:22Z",
+    "fork_of": null,
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "COMM-P11",
+    "name": "jackccrawford Reachy MCP",
+    "url": "https://github.com/jackccrawford/reachy-mini-mcp",
+    "source_ids": [
+      "COMM-S07"
+    ],
+    "category": "robot tool adapter",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Available; last push July 2026",
+    "fit_for_private_german_wireless": "Compact tool interface reference.",
+    "limitations": "Deepgram speech and old port assumptions need replacement/revalidation.",
+    "license_verified": "MIT",
+    "last_push_reported_by_api": "2026-07-29T03:53:12Z",
+    "fork_of": null,
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "COMM-P12",
+    "name": "rosaOS",
+    "url": "https://github.com/castorini/rosaos",
+    "source_ids": [
+      "COMM-S08"
+    ],
+    "category": "multi-service research architecture",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Available; last push June 2026",
+    "fit_for_private_german_wireless": "Reference for centralized device mediation.",
+    "limitations": "Research orchestration adds services; Lite-first requirements; license not detected; no reason to run an unconstrained swarm in live child interaction.",
+    "license_verified": null,
+    "last_push_reported_by_api": "2026-06-30T01:45:54Z",
+    "fork_of": null,
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "COMM-P13",
+    "name": "Reachy Mini Lab",
+    "url": "https://github.com/1xabhay/reachy-mini-lab",
+    "source_ids": [
+      "COMM-S10"
+    ],
+    "category": "diagnostics",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Archived",
+    "fit_for_private_german_wireless": "Read-only diagnostic examples and reproductions.",
+    "limitations": "Do not install as a maintained safety/runtime dependency.",
+    "license_verified": "Apache-2.0",
+    "last_push_reported_by_api": "2026-10-23T23:06:36Z",
+    "fork_of": null,
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "COMM-P14",
+    "name": "reachy-brain",
+    "url": "https://github.com/phola/reachy-brain",
+    "source_ids": [
+      "COMM-S12"
+    ],
+    "category": "local voice prototype",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Available alpha; last push April 2026",
+    "fit_for_private_german_wireless": "Illustrates thin Wireless client/local backend.",
+    "limitations": "MLX/M3 Max stack does not directly fit Ubuntu/Pascal; no verified German or license.",
+    "license_verified": null,
+    "last_push_reported_by_api": "2026-04-06T22:15:57Z",
+    "fork_of": null,
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "COMM-P15",
+    "name": "segutwein Jetson assistant",
+    "url": "https://github.com/segutwein/jetson-assistant",
+    "source_ids": [
+      "COMM-S18"
+    ],
+    "category": "German local cascade",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Public fork targeting Orin Nano 8GB",
+    "fit_for_private_german_wireless": "German Piper/STT-language configuration and component benchmark reference.",
+    "limitations": "Not a stock Wireless deployment or Pascal benchmark. English-only STT benchmark must not be quoted as German accuracy.",
+    "license_verified": null,
+    "last_push_reported_by_api": null,
+    "fork_of": "NVIDIA-AI-IOT/reachy-mini-jetson-assistant",
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "COMM-P16",
+    "name": "Hello World local fork",
+    "url": "https://huggingface.co/spaces/N-A-M-I-O/hello_world_local/blob/main/docs.html",
+    "source_ids": [
+      "COMM-S19"
+    ],
+    "category": "community dashboard",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Published docs; no local execution",
+    "fit_for_private_german_wireless": "Reference configurable local endpoints and German STT hint.",
+    "limitations": "Fork provenance/license and actual egress require audit; do not enable recording/provider fallbacks by default.",
+    "license_verified": null,
+    "last_push_reported_by_api": null,
+    "fork_of": null,
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "COMM-P17",
+    "name": "Robi",
+    "url": "https://www.tiinyverse.com/posts/4fd4e3a6-fa31-4759-940e-7febacabe55f",
+    "source_ids": [
+      "COMM-S20"
+    ],
+    "category": "private German child companion",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Author report; code not verified",
+    "fit_for_private_german_wireless": "Relevant parent-authored routines, predictable replay and local-tier separation.",
+    "limitations": "Not a package recommendation, clinical outcome or reliable automatic distress detector.",
+    "license_verified": null,
+    "last_push_reported_by_api": null,
+    "fork_of": null,
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "COMM-P18",
+    "name": "NVIDIA Reachy personal-assistant demo",
+    "url": "https://github.com/brevdev/reachy-personal-assistant",
+    "source_ids": [
+      "COMM-S09"
+    ],
+    "category": "personal-assistant example",
+    "status_as_of": "2026-11-02",
+    "evidence_status": "Available; last push March 2026",
+    "fit_for_private_german_wireless": "General architecture/demo reference.",
+    "limitations": "Resource/provider requirements not validated for this host or private child use.",
+    "license_verified": "Apache-2.0",
+    "last_push_reported_by_api": "2026-03-10T01:22:51Z",
+    "fork_of": null,
+    "tested_on_user_hardware": false
+  },
+  {
+    "id": "ARCH-P1",
+    "name": "whisper.cpp",
+    "url": "https://github.com/ggml-org/whisper.cpp",
+    "role": "Private German ASR candidate",
+    "status": "primary source reviewed; not installed or benchmarked for this robot",
+    "license": "MIT repository metadata",
+    "integration": "LAN companion service; multilingual weights, German transcription task, no English-only model",
+    "limitations": [
+      "Test actual child speech and pauses.",
+      "CPU baseline before relying on GPU."
+    ]
+  },
+  {
+    "id": "ARCH-P2",
+    "name": "Piper",
+    "url": "https://github.com/OHF-Voice/piper1-gpl",
+    "role": "Private German TTS baseline",
+    "status": "maintained runtime; exact release and voice to be selected",
+    "license": "GPL-3.0 runtime; per-voice model cards",
+    "integration": "CPU synthesis with short streaming chunks and cached activity prompts",
+    "limitations": [
+      "Do not assume all voices share the repository license.",
+      "Test German umlauts, numbers, letter names and audible cancellation."
+    ]
+  },
+  {
+    "id": "ARCH-P3",
+    "name": "llama.cpp / unmodified Qwen3.5-4B",
+    "url": "https://huggingface.co/Qwen/Qwen3.5-4B",
+    "role": "Private conversational model candidate",
+    "status": "candidate, not benchmarked on current loaded target host",
+    "license": "Qwen card Apache-2.0; runtime license separately",
+    "integration": "Dedicated local serving alias and no hosted fallback",
+    "limitations": [
+      "Do not reuse Huihui abliterated weights as the child default.",
+      "Model size is not evidence of age-appropriate dialogue or reliable tools."
+    ]
+  },
+  {
+    "id": "ARCH-P4",
+    "name": "GCompris",
+    "url": "https://gcompris.net/index-de.html",
+    "role": "Optional German supervised tablet/desktop activities",
+    "status": "primary project reviewed; robot adapter proposed",
+    "license": "Free software; check component/asset license when extracting",
+    "integration": "Use parent-selected activity ideas or explicit activity-event integration; not raw GUI control by child model",
+    "limitations": [
+      "Robot narration/adapter must be built.",
+      "Select age-appropriate activities rather than whole catalog."
+    ]
+  },
+  {
+    "id": "ARCH-P5",
+    "name": "Global ASP",
+    "url": "https://github.com/global-asp/global-asp",
+    "role": "Licensed multilingual story source with German material",
+    "status": "primary repository reviewed; no full story corpus imported",
+    "license": "Default CC BY with per-story exceptions",
+    "integration": "Item-level license and attribution manifest, German adaptation and caregiver preview",
+    "limitations": [
+      "Retain author, illustrator and translator credits.",
+      "Content suitability requires review independent of license."
+    ]
+  }
+]
