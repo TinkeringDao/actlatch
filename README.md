@@ -1,10 +1,10 @@
-# Reachy Companion
+# actlatch
 
-[![CI](https://github.com/TinkeringDao/reachy-companion/actions/workflows/ci.yml/badge.svg)](https://github.com/TinkeringDao/reachy-companion/actions/workflows/ci.yml)
-[![Security](https://github.com/TinkeringDao/reachy-companion/actions/workflows/security.yml/badge.svg)](https://github.com/TinkeringDao/reachy-companion/actions/workflows/security.yml)
+[![CI](https://github.com/TinkeringDao/actlatch/actions/workflows/ci.yml/badge.svg)](https://github.com/TinkeringDao/actlatch/actions/workflows/ci.yml)
+[![Security](https://github.com/TinkeringDao/actlatch/actions/workflows/security.yml/badge.svg)](https://github.com/TinkeringDao/actlatch/actions/workflows/security.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Offline simulation scaffold, safety-latch recovery policy, and commissioning checklist for a local German guided-play companion targeting **Reachy Mini Wireless**.
+Fail-closed SQLite actuator fault-latch recovery controller, offline simulation scaffold, and commissioning safety checklist for **Reachy Mini Wireless**.
 
 The runnable Python package exercises local-only endpoint validation, message-envelope parsing, generation-gated German activity templates, and SQLite-backed fault/retry budgets without touching network sockets, microphones, cameras, or robot actuators.
 
@@ -19,6 +19,8 @@ The runnable Python package exercises local-only endpoint validation, message-en
 Requires Python 3.11+ and [`uv`](https://docs.astral.sh/uv/):
 
 ```sh
+git clone https://github.com/TinkeringDao/actlatch.git
+cd actlatch
 uv sync --locked
 uv run reachy-companion doctor
 uv run reachy-companion demo --activity story_turns
