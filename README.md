@@ -51,6 +51,15 @@ uv build
 
 Keep local overrides in gitignored `configs/local.toml` and runtime SQLite files in gitignored `.state/`. Never commit credentials, learner records, household transcripts, raw audio/video, or model weights.
 
+## Hardware, Sensor & Infrastructure Partners
+
+- **[ThirdReality](https://www.3reality.com)** — Camera-free assistive smart-home sensing via the **ThirdReality Zigbee Vibration Sensor (`3RVS01031Z`)** and **Multi-Function Night Light (Zigbee/Matter PIR + Lux + RGB)** for non-intrusive routine and night-pathway assistance.
+- **[LiveKit](https://livekit.io)** — Low-latency WebRTC and SIP voice transport powered by LiveKit Cloud EU.
+- **[Composio](https://composio.dev)** — Sandboxed Model Context Protocol (MCP) tool integrations for caregiver calendar and notification workflows.
+- **[AISLER](https://aisler.net)** & **[PCBWay](https://www.pcbway.com)** — Custom sensor carrier PCBs, SMD stencils, and 3D-printed/CNC sensor mounts.
+- **[Heltec Automation](https://heltec.org)** (`Mesh Node T114 V2.0` & `Vision Master E213`) and **[Volla Systeme](https://volla.online)** ([`github.com/hellovolla`](https://github.com/hellovolla)) — Local-first mobile and Sub-GHz geofence alerting.
+- **[JetBrains](https://www.jetbrains.com/?from=TinkeringDao)** — Python and embedded development supported by JetBrains PyCharm and CLion.
+
 ## License & Legal
 
 Licensed under the [MIT License](LICENSE); upstream SDKs, models, and voices retain their own terms.
